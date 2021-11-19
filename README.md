@@ -15,6 +15,6 @@ d) how web technologies work?
 - types of websites : static, dynamic and responsive  
 - RESTful APIs : a contract between server and client, a way to communicate between backend and frontend using diff 
 HTTP methods like GET, POST, PUT, DELETE, PATCH
-- data exchange formats - json and xml
+- data exchange formats - json and xml  
 e) Website design principles - reactive websites, single-page websites, MVC,MVP,MVMM and MV* architecture and web application framework  
 f) latest developments - VirtualDOM, ShadowDOM, Sockets, Pub/Sub, Push Notifications, Browser Native APIs(Location, User Data)
