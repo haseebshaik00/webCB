@@ -1,7 +1,7 @@
-**1) Introduction**
-a) how the web works: servers, clients, ISPs, DNS, Datacenters
-b) web terminologies: protocols; addresses-ip,domain,mac; packets
-c) components of web: web pages, web sites, web servers, search engines
+**1) Introduction**  
+a) how the web works: servers, clients, ISPs, DNS, Datacenters  
+b) web terminologies: protocols; addresses-ip,domain,mac; packets  
+c) components of web: web pages, web sites, web servers, search engines  
 d) how web technologies work?  
 - server   
 - server frameworks : java(spring,play,jboss);python(flask,django,bottle);ruby-rails
