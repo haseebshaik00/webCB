@@ -22,9 +22,9 @@ f) latest developments - VirtualDOM, ShadowDOM, Sockets, Pub/Sub, Push Notificat
 
 **2) HTML**  
 a) html5 boilerplate and description of each element and attribute in it  
-b) normal text, tags - para<p></p>", break<br>, italic <i></i><em></em>, bold<b></b><strong></strong>, underline<u></u>,
-strikethrough text<s></s>, lists (<ul><li></li></ul> ; <ol><li></li></ol>) and their types, type and start attribute can also 
-be written, nested lists, 
+b) normal text, tags - para"p-/p", break"br", italic "i-/i" or "em-/em", bold "b-/b" or "strong-/strong", underline"u-/u",
+strikethrough text"s-/s", lists ("ul li-/li ul" ; "ol li-/li ol") and their types, type and start attribute can also 
+be written, nested lists,
 tables : https://github.com/haseebshaik00/FullStack_NodeJS_Live_March2020/blob/master/Lecture01/html-basics/tables.html  
 c) block and inline elements ~ elements can be changed to one another changing the display attribute in CSS  
 d) 
@@ -32,3 +32,5 @@ d)
 
 ### Writing README files on github
 https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+<br>
+https://levelup.gitconnected.com/github-readme-cheatsheet-617dff61fa23
