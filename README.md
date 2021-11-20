@@ -31,6 +31,6 @@ d)
 
 
 ### Writing README files on github
-https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+1) https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 <br>
-https://levelup.gitconnected.com/github-readme-cheatsheet-617dff61fa23
+2) https://levelup.gitconnected.com/github-readme-cheatsheet-617dff61fa23
