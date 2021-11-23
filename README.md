@@ -40,15 +40,15 @@ a) used for styling texts, styling boxes and css layout
 b) selectors - type, class(.), id(#), universal(*), attribute exampls- input[disabled] or input[type="text"]    
 c) 
 
-<br>
-## Notes
+
+## Notes  
 1) provide same name for a particular section of radio buttons to select only one radio button  
 2) to select a checkbox just by clicking the text you can use target the label "for" attribute with input's id  
 3)  
 
 https://www.coursehero.com/qa/wait/35803237/?question_id=35803237
 
-<br>
+
 ## Writing README files on github
 1) https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax  
 2) https://levelup.gitconnected.com/github-readme-cheatsheet-617dff61fa23
