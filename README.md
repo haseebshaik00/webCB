@@ -38,7 +38,9 @@ h) The method attribute specifies how to send form-data (the form-data is sent t
 **3) CSS**  
 a) used for styling texts, styling boxes and css layout  
 b) selectors - type, class(.), id(#), universal(*), attribute exampls- input[disabled] or input[type="text"]    
-c) 
+c) combinators - adjacent sibling selector(+), general sibling selector(~), child selector(>), descendent selector(" ")    
+d) pseudo selectors - hover, active and focus  
+e) more pseudo selectors - nth-child(), last-child, first-child, placeholder, link, visited
 
 
 ## Notes  
