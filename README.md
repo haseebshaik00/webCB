@@ -32,21 +32,29 @@ d) block and inline elements ~ elements can be changed to one another changing t
 e) form https://github.com/haseebshaik00/FullStack_NodeJS_Live_March2020/blob/master/Lecture02/more-with-html/forms.html : names is mainly used to refer the elements where as id is mainly used by js, form elements : input "input" many types~password, email,number has min and max attributes too, color, file, checkbox, radio; date; textarea "textarea-/textarea" adjust size with rows and cols; select with options "select option-/option /select" ~ multiple attribute can also be use in this  
 f) more form tags : button "button-/button" ~ type="submit" or "reset";  
 g) form action="" The HTML form action attribute defines where to send the form data when a form is submitted in an HTML document.  
-h) The method attribute specifies how to send form-data (the form-data is sent to the page specified in the action attribute). The form-data can be sent as URL variables (with method="get" ) or as HTTP post transaction (with method="post" ).  
+h) The method attribute specifies how to send form-data (the form-data is sent to the page specified in the action attribute). The form-data can be sent as URL variables (with method="get" ) or as HTTP post transaction (with method="post").  
 
 
 **3) CSS**  
-a) used for styling texts, styling boxes and css layout  
-b) selectors - type, class(.), id(#), universal(*), attribute exampls- input[disabled] or input[type="text"]    
-c) combinators - adjacent sibling selector(+), general sibling selector(~), child selector(>), descendent selector(" ")    
-d) pseudo selectors - hover, active and focus  
-e) more pseudo selectors - nth-child(), last-child, first-child, placeholder, link, visited
+a) referred in the head tag using - <link rel="stylesheet" href="./style.css">    
+b) used for styling texts, styling boxes and css layout  
+c) selectors - type, class(.), id(#), universal(*), attribute exampls- input[disabled] or input[type="text"]    
+d) combinators - adjacent sibling selector(+), general sibling selector(~), child selector(>), descendent selector(" ")    
+e) pseudo selectors used with an ":" - hover, active and focus  
+f) more pseudo selectors - nth-child(), last-child, first-child, placeholder, link, visited  
+g) id has 1:1 mapping whereas classses have many:many mapping  
+h) body selector affects only body tag whereas * affects every tags individually    
+i) overriding preference "id>class>element>*"  
+j) if a body selector is written twice the second one will overwrite the same properties present in the first one  
+h) css "inline-internal-external" file tags which are written last gets the higher priority  
+i) 
 
 
 ## Notes  
 1) provide same name for a particular section of radio buttons to select only one radio button  
 2) to select a checkbox just by clicking the text you can use target the label "for" attribute with input's id  
-3)  
+3) 
+4) 
 
 https://www.coursehero.com/qa/wait/35803237/?question_id=35803237
 

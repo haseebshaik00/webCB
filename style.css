@@ -1,5 +1,18 @@
 body{
-    background-color: pink;
+    
+    background-color: #ff0000;
+    font-family: courier;
+    color: beige;
+    font-size: 30px;
+    font-weight: bold;
 }
 
-p:
+p{
+    color: brown;
+    font-size: 30pt;
+}
+
+p{
+    
+    font-size: 130pt;
+}
