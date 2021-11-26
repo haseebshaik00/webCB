@@ -39,15 +39,17 @@ h) The method attribute specifies how to send form-data (the form-data is sent t
 a) referred in the head tag using - <link rel="stylesheet" href="./style.css">    
 b) used for styling texts, styling boxes and css layout  
 c) selectors - type, class(.), id(#), universal(*), attribute exampls- input[disabled] or input[type="text"]    
-d) combinators - adjacent sibling selector(+), general sibling selector(~), child selector(>), descendent selector(" ")    
+d) combinators - adjacent sibling selector(+), general sibling selector(~), child selector(>), descendent selector(" "), or(,)      
 e) pseudo selectors used with an ":" - hover, active and focus  
 f) more pseudo selectors - nth-child(), last-child, first-child, placeholder, link, visited  
 g) id has 1:1 mapping whereas classses have many:many mapping  
 h) body selector affects only body tag whereas * affects every tags individually    
 i) overriding preference "id>class>element>*"  
 j) if a body selector is written twice the second one will overwrite the same properties present in the first one  
-h) css "inline-internal-external" file tags which are written last gets the higher priority  
-i) 
+h) css "inline-internal-external" file tags which are written last gets the higher priority and in this inline has 
+the highest precedence     
+i) font-sizes : pt (typewriter font-10pt, browser default font-14pt); px; em(1em - width of character 'm' in default font size); vh-(1/100th of window height); vw-view width  
+j) 
 
 
 ## Notes  

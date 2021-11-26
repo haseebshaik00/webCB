@@ -1,18 +1,24 @@
 body{
-    
-    background-color: #ff0000;
-    font-family: courier;
-    color: beige;
-    font-size: 30px;
-    font-weight: bold;
+    background-color: beige;
+    font-family: monospace;
+    font-size: 14pt;
 }
 
-p{
-    color: brown;
-    font-size: 30pt;
+li ul{
+    display: none;
 }
 
-p{
-    
-    font-size: 130pt;
+li:hover ul{
+    display: block;
 }
+
+li:hover ul li ul{
+    display: none;
+}
+
+li:hover ul li:hover ul{
+    display: block;
+}
+
+
+
