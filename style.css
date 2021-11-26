@@ -4,21 +4,11 @@ body{
     font-size: 14pt;
 }
 
-li ul{
-    display: none;
+.two{
+    height: 400px;
+    width: 400px;
+    background-color: brown;
+    transform: rotate(40deg);
 }
-
-li:hover ul{
-    display: block;
-}
-
-li:hover ul li ul{
-    display: none;
-}
-
-li:hover ul li:hover ul{
-    display: block;
-}
-
 
 

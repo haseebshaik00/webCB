@@ -49,7 +49,8 @@ j) if a body selector is written twice the second one will overwrite the same pr
 h) css "inline-internal-external" file tags which are written last gets the higher priority and in this inline has 
 the highest precedence     
 i) font-sizes : pt (typewriter font-10pt, browser default font-14pt); px; em(1em - width of character 'm' in default font size); vh-(1/100th of window height); vw-view width  
-j) 
+j) transform: skew, rotate, scale, translate  
+k) 
 
 
 ## Notes  
