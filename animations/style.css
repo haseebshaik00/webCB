@@ -1,0 +1,33 @@
+body{
+    background-color: pink;
+}
+
+.divbox{
+    background-color: beige;
+    height: 500px;
+    width: 500px;
+    margin: auto;
+    margin-top: 7%;
+}
+
+.divsmallbox{
+    display: inline-block;
+    background-color: maroon;
+    height: 100px;
+    width: 100px;
+    margin: 11px;
+    animation: bounce 2s ease-in infinite;
+}
+
+@keyframes bounce{
+    0% {
+        background-color: red;
+    }
+    50% {
+        transform: translateY(380px);
+        background-color: maroon;
+    }
+    100% {
+        background-color: red;
+    }
+}
