@@ -38,7 +38,7 @@ h) The method attribute specifies how to send form-data (the form-data is sent t
 **3) CSS**  
 a) referred in the head tag using - <link rel="stylesheet" href="./style.css">    
 b) used for styling texts, styling boxes and css layout  
-c) selectors - type, class(.), id(#), universal(*), attribute exampls- input[disabled] or input[type="text"]    
+c) selectors - type, class(.), id(#), universal(*), attribute exampls- input[disabled] or input[type=text]    
 d) combinators - adjacent sibling selector(+), general sibling selector(~), child selector(>), descendent selector(" "), or(,)      
 e) pseudo selectors used with an ":" - hover, active and focus  
 f) more pseudo selectors - nth-child(), last-child, first-child, placeholder, link, visited  
@@ -46,18 +46,23 @@ g) id has 1:1 mapping whereas classses have many:many mapping
 h) body selector affects only body tag whereas * affects every tags individually    
 i) overriding preference "id>class>element>*"  
 j) if a body selector is written twice the second one will overwrite the same properties present in the first one  
-h) css "inline-internal-external" file tags which are written last gets the higher priority and in this inline has 
+k) css "inline-internal-external" file tags which are written last gets the higher priority and in this inline has 
 the highest precedence   
 **more css attributes**    
-i) font-sizes : pt (typewriter font-10pt, browser default font-14pt); px; em(1em - width of character 'm' in default font size); vh-(1/100th of window height); vw-view width  
-j) transform: skew, rotate, scale, translate  
-k) box-shadow: color xaxis_shadow yaxis_shadow blur (all are in pixels), transition: seconds, border-radius: 10px,    
+l) font-sizes : pt (typewriter font-10pt, browser default font-14pt); px; em(1em - width of character 'm' in default font size); vh-(1/100th of window height); vw-view width  
+m) transform: skew, rotate, scale, translate  
+https://www.w3schools.com/cssref/css3_pr_transform.asp    
+n) box-shadow: color xaxis_shadow yaxis_shadow blur (all are in pixels), transition: seconds, border-radius: 10px     
+transition : https://www.w3schools.com/cssref/css3_pr_transition.asp  
+o) all transition is done with respect to origin where as transform is done with respect to last state  
+p) keyframes and animations : "animation: name duration timing-function delay iteration-count direction"   
+
 
 
 ## Notes  
 1) provide same name for a particular section of radio buttons to select only one radio button  
 2) to select a checkbox just by clicking the text you can use target the label "for" attribute with input's id  
-3) 
+3) giving height and width to inline elements is not possible so we make them inline-block  
 4) 
 
 https://www.coursehero.com/qa/wait/35803237/?question_id=35803237
