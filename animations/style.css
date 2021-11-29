@@ -44,7 +44,9 @@ body{
     height: 100px;
     width: 100px;
     margin-left: 100px;
-    animation: bounce 3s ease infinite;
+    animation: bounce 3s ease 0s infinite;
+    animation-direction: alternate;
+    animation-fill-mode: backwards;
 }
 
 .divsmallbox.two{

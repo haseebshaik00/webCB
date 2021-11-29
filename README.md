@@ -56,9 +56,12 @@ n) box-shadow: color xaxis_shadow yaxis_shadow blur (all are in pixels), transit
 transition : https://www.w3schools.com/cssref/css3_pr_transition.asp  
 transition: property duration timing-function delay|initial|inherit;  
 o) all transition is done with respect to origin where as transform is done with respect to last state  
-p) keyframes and animations : "animation: name duration timing-function delay iteration-count direction" and animation-fill-mode    
-q) 
+p) keyframes and animations : "animation: name duration timing-function delay iteration-count direction" and animation-direction, animation-fill-mode  
 
+
+**3) CSS Flexbox**  
+a) https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+b) 
 
 
 ## Notes  
