@@ -1,0 +1,25 @@
+body{
+    background-color: powderblue;
+}
+
+.container{
+    margin: 50px;
+    height: 600px;
+    width: 600px;
+    background-color: khaki;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; /* the above two statements short form : flex-flow:row wrap*/
+    justify-content: flex-end; /*  how items within a row are aligned in order*/
+    align-items: baseline; /* align items within the row perpendicularly*/
+    align-content: flex-end; /* how rows all together are aligned*/
+    gap: 20px 30px;
+}
+
+.item{
+    height: 100px;
+    width: 100px;
+    background-color: greenyellow;
+    margin: 12px;
+    font-size: 20pt;
+}

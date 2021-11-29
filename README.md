@@ -68,7 +68,8 @@ b)
 1) provide same name for a particular section of radio buttons to select only one radio button  
 2) to select a checkbox just by clicking the text you can use target the label "for" attribute with input's id  
 3) giving height and width to inline elements is not possible so we make them inline-block  
-4) 
+4) use text-align:center; to align text in the center of div  
+5) 
 
 https://www.coursehero.com/qa/wait/35803237/?question_id=35803237
 
