@@ -54,8 +54,10 @@ m) transform: skew, rotate, scale, translate
 https://www.w3schools.com/cssref/css3_pr_transform.asp    
 n) box-shadow: color xaxis_shadow yaxis_shadow blur (all are in pixels), transition: seconds, border-radius: 10px     
 transition : https://www.w3schools.com/cssref/css3_pr_transition.asp  
+transition: property duration timing-function delay|initial|inherit;  
 o) all transition is done with respect to origin where as transform is done with respect to last state  
-p) keyframes and animations : "animation: name duration timing-function delay iteration-count direction"   
+p) keyframes and animations : "animation: name duration timing-function delay iteration-count direction" and animation-fill-mode    
+q) 
 
 
 

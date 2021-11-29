@@ -1,22 +1,59 @@
 body{
     background-color: pink;
+    padding: 0;
+    margin: 0;
+}
+
+.heading{
+    text-align: center;
+    font-family: monospace;
+    font-size: 30pt;
+    font-style: italic;
+    background-color: burlywood;
+    width: 100%;
 }
 
 .divbox{
     background-color: beige;
     height: 500px;
-    width: 500px;
+    width: 700px;
     margin: auto;
-    margin-top: 7%;
+    margin-top: 1%;
+    border-radius: 20px;
+    padding: 50px;
 }
 
-.divsmallbox{
+.gooddivsmallbox{
+    display: inline-block;
+    background-color: palevioletred;
+    height: 100px;
+    width: 100px;
+    margin: 1px;
+    transform: translateY(190px);
+    animation: move 3s linear 0s infinite;
+    animation-play-state: paused;
+}
+
+.divbox:active .gooddivsmallbox{
+    animation-play-state: running;
+}
+
+.divsmallbox.one{
     display: inline-block;
     background-color: maroon;
     height: 100px;
     width: 100px;
-    margin: 11px;
-    animation: bounce 2s ease-in infinite;
+    margin-left: 100px;
+    animation: bounce 3s ease infinite;
+}
+
+.divsmallbox.two{
+    display: inline-block;
+    background-color: maroon;
+    height: 100px;
+    width: 100px;
+    margin-left: 140px;
+    animation: bounce 3s ease-in infinite;
 }
 
 @keyframes bounce{
@@ -29,5 +66,12 @@ body{
     }
     100% {
         background-color: red;
+    }
+}
+
+@keyframes move {
+    50%{
+        transform: translateY(190px) translateX(600px);
+
     }
 }
