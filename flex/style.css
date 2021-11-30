@@ -14,6 +14,7 @@ body{
     align-items: baseline; /* align items within the row perpendicularly*/
     align-content: flex-end; /* how rows all together are aligned*/
     gap: 20px 30px;
+    text-align: center;
 }
 
 .item{

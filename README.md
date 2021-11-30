@@ -57,10 +57,56 @@ transition : https://www.w3schools.com/cssref/css3_pr_transition.asp
 transition: property duration timing-function delay|initial|inherit;  
 o) all transition is done with respect to origin where as transform is done with respect to last state  
 p) keyframes and animations : "animation: name duration timing-function delay iteration-count direction" and animation-direction, animation-fill-mode  
+q) use text-align:center; to align text in the center of div  
 
 
 **4) CSS Flexbox**  
-a) https://css-tricks.com/snippets/css/a-guide-to-flexbox/  
+a) https://css-tricks.com/snippets/css/a-guide-to-flexbox/ 
+b) display: flex;
+c) flex-wrap: wrap;
+d) flex-direction: row; /* the above two statements short form : flex-flow:row wrap*/
+e) justify-content: flex-end; /*  how items within a row are aligned in order*/
+f) align-items: baseline; /* align items within the row perpendicularly*/
+g) align-content: flex-end; /* how rows all together are aligned*/
+h) gap: 20px 30px;
+i) text-align: center;
+
+
+**5) Media Queries**
+a) All possible queries  
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .example {background: red;}
+}
+  
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {background: green;}
+}
+  
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example {background: blue;}
+} 
+  
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example {background: orange;}
+} 
+  
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example {background: pink;}
+}     
+@media only screen and (orientation: landscape) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+  
+**6) JS**  
+a) <script async defer src="script.js"></script> : syntax for js file integration  
 b) 
 
 
@@ -68,8 +114,9 @@ b)
 1) provide same name for a particular section of radio buttons to select only one radio button  
 2) to select a checkbox just by clicking the text you can use target the label "for" attribute with input's id  
 3) giving height and width to inline elements is not possible so we make them inline-block  
-4) use text-align:center; to align text in the center of div  
+4) vertically middle height can be maintained using line-height property  
 5) 
+
 
 https://www.coursehero.com/qa/wait/35803237/?question_id=35803237
 
