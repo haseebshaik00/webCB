@@ -106,7 +106,7 @@ a) All possible queries
 
   
 **6) JS**  
-a) <script async defer src="script.js"></script> : syntax for js file integration  
+a) <script async defer type="text/javascript" src="script.js"></script> : syntax for js file integration  
 b) 
 
 
