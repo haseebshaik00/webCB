@@ -10,17 +10,29 @@ body{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row; /* the above two statements short form : flex-flow:row wrap*/
-    justify-content: flex-end; /*  how items within a row are aligned in order*/
-    align-items: baseline; /* align items within the row perpendicularly*/
-    align-content: flex-end; /* how rows all together are aligned*/
+    justify-content: flex-start; /*  how items within a row are aligned in order*/
+    align-items: center; /* align items within the row perpendicularly*/
+    align-content: flex-start; /* how rows all together are aligned*/
     gap: 20px 30px;
     text-align: center;
 }
 
 .item{
     height: 100px;
-    width: 100px;
+    width: 150px;
     background-color: greenyellow;
     margin: 12px;
     font-size: 20pt;
+}
+
+.one{
+    order: 0;
+    flex-grow: 2;
+    flex-shrink: 1;
+    flex-basis: 1;
+    /*flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ];
+    This is the shorthand for flex-grow, flex-shrink and flex-basis combined. 
+    The second and third parameters (flex-shrink and flex-basis) are optional. 
+    The default is 0 1 auto, but if you set it with a single number value, it’s like 1 0.*/
+    /*should be written for every item in a row*/
 }
