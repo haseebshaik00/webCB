@@ -27,9 +27,10 @@ body{
 
 .one{
     order: 0;
-    flex-grow: 2;
+    flex-grow: 0;
     flex-shrink: 1;
     flex-basis: 1;
+    align-self: flex-end;
     /*flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ];
     This is the shorthand for flex-grow, flex-shrink and flex-basis combined. 
     The second and third parameters (flex-shrink and flex-basis) are optional. 
