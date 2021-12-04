@@ -1,0 +1,54 @@
+.container{
+    height: auto;
+    width: 400px;
+    background-color: burlywood;
+    padding: 10px;
+    margin: 10px;
+}
+
+.item{
+    height: 50px;
+    width: 50px;
+    background-color: coral;
+    margin: 20px;
+    padding: 10px;
+    font-weight: bolder;
+    color: white;
+    font-size: 20pt;
+}
+
+.one{
+    position: static;/*default : left right all this are not applied to this*/
+    left: 100px;
+    top: 90px;
+}
+
+.one{
+    position: relative;/*changes its position with respect to its original position*/
+    left: 100px;
+    top: 90px;
+}
+
+.two{
+    position: fixed;/*fixes its position from viewport of the page*/
+    left: 20px;
+    top: 20px;
+}
+
+.three{
+    position: absolute;/*positioned relative to the nearest positioned ancestor
+    However; if an absolute positioned element has no positioned ancestors, 
+    it uses the document body, and moves along with page scrolling.*/
+    left: 100px;
+    top: 100px;
+}
+
+.four{
+    position: sticky;/*An element with position: sticky; is positioned based on the user's scroll position.
+    A sticky element toggles between relative and fixed, depending on the scroll position. 
+    It is positioned relative until a given offset position is met in the viewport - then it "sticks" 
+    in place (like position:fixed).*/
+    left: 20px;
+    top: 100px;
+    bottom: 100px;
+}
