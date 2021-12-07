@@ -1,0 +1,7 @@
+console.log(13313, typeof 13313)
+console.log(234234.5356, typeof 234234.5356)
+console.log('a', typeof 'a')
+console.log('asdasfasfa', typeof "asdasfasfa")
+console.log(true, typeof true)
+console.log(null, typeof null)
+console.log(undefined, typeof undefined)
