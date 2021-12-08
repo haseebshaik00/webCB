@@ -107,7 +107,12 @@ a) All possible queries
   
 **6) JS**  
 a) <script async defer type="text/javascript" src="script.js"></script> : syntax for js file integration  
-b) 
+b) datatypes : (number,string,boolean,object,function,undefined)  
+c) functions : hoisting, reference error for func declared with let as these functions are not hoisted as they are actually defined as a variable, polymorphism, arguments  
+d) higher order functions : A higher order function is a function that either takes a function as an argument or returns a function = in C it is possible to create a function in another function and call it in it's immediate scope, 
+e) In js, polymorphism can work only using if condn not by defining func two times - for this the func gets overidden      
+f) all the arguments passed to a func in js are present in an array called arguments  
+g) 
 
 
 ## Notes  
@@ -115,7 +120,9 @@ b)
 2) to select a checkbox just by clicking the text you can use target the label "for" attribute with input's id  
 3) giving height and width to inline elements is not possible so we make them inline-block  
 4) vertically middle height can be maintained using line-height property  
-5) 
+5) to prevent text overflowing from div --- word-break: break-all;  
+6) 
+  
 
 
 https://www.coursehero.com/qa/wait/35803237/?question_id=35803237

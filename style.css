@@ -10,11 +10,12 @@ html, body{
     padding: 20px;
     color: darkorchid; 
     margin: auto;
-    width: 50%;
-    height: 50%;
+    width: 70%;
+    height: 70%;
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
+    word-break: break-all;
 }
