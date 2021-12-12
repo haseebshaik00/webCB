@@ -113,7 +113,10 @@ c) functions : hoisting, reference error for func declared with let as these fun
 d) higher order functions : A higher order function is a function that either takes a function as an argument or returns a function = in C it is possible to create a function in another function and call it in it's immediate scope  
 e) In js, polymorphism can work only using if condn not by defining func two times - for this the func gets overidden      
 f) all the arguments passed to a func in js are present in an array called arguments  
-g) basics - let; print - cosole.log(), alert(), window.print();  
+g) basics - print- cosole.log(), alert(), window.print(); defining variable- normal, var, let
+h) arrays: functions - length, push, pop, indexOf, shift, unshift  
+i) json: foreach loop, function declaration & expression, json object, function inside a json object  
+j) classes & objects- three methods of defining an object - normal, with function & with class declaration  
 
 
 ## Notes  
@@ -122,7 +125,8 @@ g) basics - let; print - cosole.log(), alert(), window.print();
 3) giving height and width to inline elements is not possible so we make them inline-block  
 4) vertically middle height can be maintained using line-height property  
 5) to prevent text overflowing from div --- word-break: break-all;  
-6) 
+6) classes are not hoisted  
+7) 
   
 
 

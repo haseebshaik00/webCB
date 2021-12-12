@@ -1,9 +1,9 @@
 // 1) datatypes.js
-function a(){
+function a(){ //function declaration
     return 1
 }
 
-let b = function () {
+let b = function () { //function expression
     return 1
 }
 
@@ -111,6 +111,56 @@ b) <!-- here we are calling the function and passing the value (string) -->
 // 4) basics.js
 let p = 10
 console.log(p)
-alert("yo")
+//alert("yo")
 let q = [1,2,3,4,5]
 console.log(q)
+
+r = 20; //global scope
+var s = 30; //function scope
+let t = 40; //block scope
+
+let u = [1,2,3]
+console.log(u.length)
+console.log(u["length"])
+
+// oops in javascript - allows us to create objects without a class 
+// example of an object in js - js object ~ json object~ js object notation object 
+// a) object creation normal
+var bird = {
+    x:100,y:200,array:[1,2,3],
+    f: function(){
+        console.log(this.x); 
+    }
+};
+
+//foreach loop
+bird.array.forEach(function(i,j){
+    console.log(i,j);
+});
+
+
+// b) object creation with function declaration
+function student(id,name){
+    this.id = id;
+    this.name = name
+}
+
+let haseeb = new student(1,"haseeb");
+
+// c) object creation with class declaration - class keyword(ECMAScript 2015) - ES
+class Studentregd{
+    constructor(id,name){
+        this.id = id;
+        this.name = name;
+    }
+};
+
+let Studentregd2 = class{
+    constructor(id,name){
+        this.id = id;
+        this.name = name;
+    }
+};
+
+let kunal = new Studentregd(1,"kunal");
+let lakshit = new Studentregd2(1,"lakshit");
