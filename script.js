@@ -1,5 +1,4 @@
-///////////////////////////////////////////////////////////  
-//********* datatypes.js  ************//
+// 1) datatypes.js
 function a(){
     return 1
 }
@@ -19,8 +18,7 @@ console.log(undefined, typeof undefined)
 console.log(a(), typeof a())
 console.log(a, typeof a)
 
-///////////////////////////////////////////////////////////  
-//********* functions.js *********//
+// 2) functions.js
 console.log(beta()) //hoisting
 
 function alpha () {
@@ -60,10 +58,9 @@ function hello () {
 hello(1, 2)
 hello('Arnav', 'Gupta')
 
-///////////////////////////////////////////////////////////
-//********* higher_order_functions.js ***********//
+// 3) higher_order_functions.js
 //https://github.com/haseebshaik00/FullStack_NodeJS_Live_March2020/tree/master/Lecture05/js-basics
-// 1) returning a function
+// a) returning a function
 function createGreeter(greet_msg)
 {
     function greet(name)
@@ -81,11 +78,11 @@ function getName() {
     return document.getElementById('namebox').value
 }
 
-//2) passing a function as an argument
-g1(getName) // in this we are passing a function
+//b) passing a function as an argument
+// g1(getName) - in this we are passing a function
 
 /*
-3) 2 types - for printing name
+// 2 types - for printing name
 a) 
     <!-- here we are passing the function itself -->
     <button onclick="g1(getName)">GM</button>
@@ -110,3 +107,10 @@ b) <!-- here we are calling the function and passing the value (string) -->
     return greet
     }
 */
+
+// 4) basics.js
+let p = 10
+console.log(p)
+alert("yo")
+let q = [1,2,3,4,5]
+console.log(q)

@@ -107,12 +107,13 @@ a) All possible queries
   
 **6) JS**  
 a) <script async defer type="text/javascript" src="script.js"></script> : syntax for js file integration  
+https://www.w3schools.com/tags/att_script_async.asp  
 b) datatypes : (number,string,boolean,object,function,undefined)  
 c) functions : hoisting, reference error for func declared with let as these functions are not hoisted as they are actually defined as a variable, polymorphism, arguments  
-d) higher order functions : A higher order function is a function that either takes a function as an argument or returns a function = in C it is possible to create a function in another function and call it in it's immediate scope, 
+d) higher order functions : A higher order function is a function that either takes a function as an argument or returns a function = in C it is possible to create a function in another function and call it in it's immediate scope  
 e) In js, polymorphism can work only using if condn not by defining func two times - for this the func gets overidden      
 f) all the arguments passed to a func in js are present in an array called arguments  
-g) 
+g) basics - let; print - cosole.log(), alert(), window.print();  
 
 
 ## Notes  
