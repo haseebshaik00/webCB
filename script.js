@@ -163,4 +163,6 @@ let Studentregd2 = class{
 };
 
 let kunal = new Studentregd(1,"kunal");
-let lakshit = new Studentregd2(1,"lakshit");
+let lakshit = new Studentregd2ma(1,"lakshit");
+
+// 5) strings.js
