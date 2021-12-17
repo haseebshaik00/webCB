@@ -122,6 +122,12 @@ let t = 40; //block scope
 let u = [1,2,3]
 console.log(u.length)
 console.log(u["length"])
+for(i of u){
+    console.log(i);
+}
+for(let index in u){
+    console.log(index);
+}
 
 // oops in javascript - allows us to create objects without a class 
 // example of an object in js - js object ~ json object~ js object notation object 
@@ -166,3 +172,20 @@ let kunal = new Studentregd(1,"kunal");
 let lakshit = new Studentregd2ma(1,"lakshit");
 
 // 5) strings.js
+
+let str = "hello world"
+console.log(str);
+let str1 = 'haseeb s\'s';
+console.log(str1);
+let str2 = "haseeb"; // ECMAScript 2016
+console.log(`hi ${str2}`);
+
+//string functions
+s = "haseeb is a good boy";
+console.log(s.length);
+console.log(s.indexOf("is")); // position to start search from can also be given
+console.log(s.lastIndexOf("is")); // position to start search from can also be given
+console.log(s.slice(2,5)); // 2 to 5-1 ; negative indexes can also be included
+console.log(s.substring(2,7)); //  2 to 7-1 ; negative indexes cannot be included
+console.log(s.substring(2,7)); // 7 characters from 2 ; negative indexes cannot be included
+console.log(s.substr(2,7)); // 7 characters from 2 ; negative indexes can also be included

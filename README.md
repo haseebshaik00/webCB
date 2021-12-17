@@ -114,10 +114,10 @@ d) higher order functions : A higher order function is a function that either ta
 e) In js, polymorphism can work only using if condn not by defining func two times - for this the func gets overidden      
 f) all the arguments passed to a func in js are present in an array called arguments  
 g) basics - print- cosole.log(), alert(), window.print(); defining variable- normal, var, let
-h) arrays: functions - length, push, pop, indexOf, shift, unshift  
-i) json: foreach loop, function declaration & expression, json object, function inside a json object  
+h) arrays: functions - length, push, pop, indexOf, shift, unshift 
+i) json: foreach loop, forof loop,indexin loop, function declaration & expression, json object, function inside a json object  
 j) classes & objects- three methods of defining an object - normal, with function & with class declaration  
-k) strings- 
+k) strings-   
 
 
 ## Notes  
@@ -127,7 +127,8 @@ k) strings-
 4) vertically middle height can be maintained using line-height property  
 5) to prevent text overflowing from div --- word-break: break-all;  
 6) classes are not hoisted  
-7) 
+7) we can put any type of data in an array  
+8) 
   
 
 
