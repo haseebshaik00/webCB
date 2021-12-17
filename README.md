@@ -128,7 +128,8 @@ k) strings-
 5) to prevent text overflowing from div --- word-break: break-all;  
 6) classes are not hoisted  
 7) we can put any type of data in an array  
-8) 
+8) arrays can also be concated  
+9) 
   
 
 

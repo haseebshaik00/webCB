@@ -187,5 +187,29 @@ console.log(s.indexOf("is")); // position to start search from can also be given
 console.log(s.lastIndexOf("is")); // position to start search from can also be given
 console.log(s.slice(2,5)); // 2 to 5-1 ; negative indexes can also be included
 console.log(s.substring(2,7)); //  2 to 7-1 ; negative indexes cannot be included
-console.log(s.substring(2,7)); // 7 characters from 2 ; negative indexes cannot be included
 console.log(s.substr(2,7)); // 7 characters from 2 ; negative indexes can also be included
+
+//arrays
+let u = [1,2,3,4,5,6,7,8,9,10];
+console.log(u);
+console.log(u.length);
+
+for(i of u){ 
+    console.log(i); 
+} 
+for(let index in u){ 
+    console.log(index); 
+}
+console.log(u.slice(6));
+console.log(u.slice(4,6));
+console.log(u.slice(-4,-2));
+console.log(u);
+let v = u.splice(2,6); 
+console.log(v);
+console.log(u);
+u.splice(1,3,"x","x");
+console.log(u);
+console.log(v.concat(1)); // doesnt mutate the original array
+
+
+
