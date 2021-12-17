@@ -193,8 +193,7 @@ console.log(s.substr(2,7)); // 7 characters from 2 ; negative indexes can also b
 let u = [1,2,3,4,5,6,7,8,9,10];
 console.log(u);
 console.log(u.length);
-
-for(i of u){ 
+for(let i of u){ 
     console.log(i); 
 } 
 for(let index in u){ 
@@ -209,7 +208,7 @@ console.log(v);
 console.log(u);
 u.splice(1,3,"x","x");
 console.log(u);
-console.log(v.concat(1)); // doesnt mutate the original array
+console.log(v.concat(1)); // doesnt mutate the original array; we can concat arrays with arrays also
 
 
 

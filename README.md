@@ -117,7 +117,8 @@ g) basics - print- cosole.log(), alert(), window.print(); defining variable- nor
 h) arrays: functions - length, push, pop, indexOf, shift, unshift 
 i) json: foreach loop, forof loop,indexin loop, function declaration & expression, json object, function inside a json object  
 j) classes & objects- three methods of defining an object - normal, with function & with class declaration  
-k) strings-   
+k) strings- declaration types, backtick strings, functions: length, indexOf, lastIndexOf, slice, substring, substr  
+l) more array functions: length, forof loop, indexin loop, slice, splice, concat   
 
 
 ## Notes  
