@@ -1,62 +1,71 @@
 // 1) datatypes.js
 function a(){ //function declaration
-    return 1
+    return 1;
 }
 
 let b = function () { //function expression
-    return 1
+    return 1;
 }
 
-let c=1
-console.log(13313, typeof 13313)
-console.log(234234.5356, typeof 234234.5356)
-console.log('a', typeof 'a')
-console.log('asdasfasfa', typeof "asdasfasfa")
-console.log(true, typeof true)
-console.log(null, typeof null)
-console.log(undefined, typeof undefined)
-console.log(a(), typeof a())
-console.log(a, typeof a)
+let c=1;
+console.log(13313, typeof 13313);
+console.log(234234.5356, typeof 234234.5356);
+console.log('a', typeof 'a');
+console.log('asdasfasfa', typeof "asdasfasfa");
+console.log(true, typeof true);
+console.log(null, typeof null);
+console.log(undefined, typeof undefined);
+console.log(a(), typeof a());
+console.log(a, typeof a);
 
 // 2) functions.js
-console.log(beta()) //hoisting
+console.log(beta()); //hoisting
 
 function alpha () {
-    return "A"
+    return "A";
 }
 
-console.log(beta())
+console.log(beta());
 // console.log(gamma()) // ReferenceError
 
 function beta() {
-    return "B"
+    return "B";
 }
 
-let gamma = function () {
-    return "C"
+let gamma = function () { // not hoisted
+    return "C";
 }
 
-console.log(gamma())
-console.log(beta())
+console.log(gamma());
+console.log(beta());
 
 // null - 0 - false - undefined - '' all act as false hence can be used in if  
 function area(height, width) {
     if (!width) {
-        return Math.PI * height * height
+        return Math.PI * height * height;
     }
-    return height * width
+    return height * width;
 }
 
-console.log('area 3,4 ', area(3,4))
-console.log('area 4 ', area(4))
+console.log('area 3,4 ', area(3,4));
+console.log('area 4 ', area(4));
 
 function hello () {
-    let arguments = 'asdasd' //dont do this
-    console.log('hello world ' + arguments[0] + arguments[1])
+    let arguments = 'asdasd'; //dont take the variable name arguments
+    console.log('hello world ' + arguments[0] + arguments[1]);
 }
 
-hello(1, 2)
-hello('Arnav', 'Gupta')
+function hello1 () {
+    let argument = 'asdasd'; //dont take the variable name arguments
+    console.log('hello world ' + arguments[0] + arguments[1]);
+    console.log('hello world ' + argument[0] + argument[1]);
+}
+
+hello(1, 2);
+hello('Arnav', 'Gupta');
+
+hello1(1, 2);
+hello1('Arnav', 'Gupta');
 
 // 3) higher_order_functions.js
 //https://github.com/haseebshaik00/FullStack_NodeJS_Live_March2020/tree/master/Lecture05/js-basics
@@ -65,17 +74,17 @@ function createGreeter(greet_msg)
 {
     function greet(name)
     {
-        console.log(greet_msg,name)
+        console.log(greet_msg,name);
     }
-    return greet
+    return greet;
 }
-let g1 = createGreeter('Hi')
-console.log(typeof g1)
-g1('haseeb')
-console.log(g1('haseeb'))
+
+let g1 = createGreeter('Hi');
+console.log(typeof g1);
+console.log(g1('haseeb'));
 
 function getName() {
-    return document.getElementById('namebox').value
+    return document.getElementById('namebox').value;
 }
 
 //b) passing a function as an argument
@@ -109,23 +118,23 @@ b) <!-- here we are calling the function and passing the value (string) -->
 */
 
 // 4) basics.js
-let p = 10
-console.log(p)
-//alert("yo")
-let q = [1,2,3,4,5]
-console.log(q)
+let p = 10;
+console.log(p);
+//alert("yo");
+let q = [1,2,3,4,5];
+console.log(q);
 
 r = 20; //global scope
 var s = 30; //function scope
 let t = 40; //block scope
 
-let u = [1,2,3]
-console.log(u.length)
-console.log(u["length"])
-for(i of u){
+let u1 = [1,2,3];
+console.log(u1.length);
+console.log(u1["length"]);
+for(let i of u1){ //forof loop
     console.log(i);
 }
-for(let index in u){
+for(let index in u1){ //indexin loop
     console.log(index);
 }
 
@@ -139,7 +148,7 @@ var bird = {
     }
 };
 
-//foreach loop
+//foreach loop - can be used only with array, sets and maps
 bird.array.forEach(function(i,j){
     console.log(i,j);
 });
@@ -169,7 +178,7 @@ let Studentregd2 = class{
 };
 
 let kunal = new Studentregd(1,"kunal");
-let lakshit = new Studentregd2ma(1,"lakshit");
+let lakshit = new Studentregd2(1,"lakshit");
 
 // 5) strings.js
 
@@ -186,6 +195,7 @@ console.log(s.length);
 console.log(s.indexOf("is")); // position to start search from can also be given
 console.log(s.lastIndexOf("is")); // position to start search from can also be given
 console.log(s.slice(2,5)); // 2 to 5-1 ; negative indexes can also be included
+console.log(s.slice(-5,-2)); // 2 to 5-1 ; negative indexes can also be included
 console.log(s.substring(2,7)); //  2 to 7-1 ; negative indexes cannot be included
 console.log(s.substr(2,7)); // 7 characters from 2 ; negative indexes can also be included
 
@@ -209,6 +219,4 @@ console.log(u);
 u.splice(1,3,"x","x");
 console.log(u);
 console.log(v.concat(1)); // doesnt mutate the original array; we can concat arrays with arrays also
-
-
 
