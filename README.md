@@ -119,7 +119,7 @@ i) json: foreach loop, forof loop,indexin loop, function declaration & expressio
 j) classes & objects- three methods of defining an object - normal, with function & with class declaration  
 k) strings- declaration types, backtick strings, functions: length, indexOf, lastIndexOf, slice, substring, substr  
 l) more array functions: length, forof loop, indexin loop, slice, splice, concat  
-m) closure- parent scopes are accessible inside but not the parent's arguments variable,     
+m) closure- parent scopes are accessible inside but not the parent's arguments variable, this, string literal, equality, inheritance,     
 
 
 ## Notes  
@@ -131,7 +131,9 @@ m) closure- parent scopes are accessible inside but not the parent's arguments v
 6) classes are not hoisted  
 7) we can put any type of data in an array  
 8) arrays can also be concated  
-9) 
+9) this is bound on runtime  
+10) type casting string to number - Number()  
+11) 
   
 
 
