@@ -299,7 +299,7 @@ let g2 = `Good Morning ${name}`
 
 let s7 = `10 + 2 = ${10 + 2}` // inside ${} we can write any valid js
 
-// 9) equality and inheritance
+// 9) equality and prototype based inheritance
 
 console.log(1 == '1') // true
 console.log(1 === '1') // false
@@ -330,6 +330,14 @@ obj2.r = 'dfn'
 
 let obj3 = Object.create(obj2)
 
+/*
+obj3.__proto__ - {p: 'adg', q: 'dgn', r: 'dfn'}
+obj3.__proto__.__proto__ - {a: 10, b: 20, c: 30}
+obj3.__proto__.__proto__.__proto__ -{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, 
+    hasOwnProperty: ƒ, __lookupGetter__: ƒ, …} // default prototype
+obj3.__proto__.__proto__.__proto__.__proto__ - null
+*/
+
 // obj3.__proto__ == obj2
 // obj3.__proto__.__proto__ == obj1
 
@@ -341,4 +349,103 @@ let obj3 = Object.create(obj2)
         -> it will try to find it in obj2.__proto__.__proto__
         -> ... and so on... 
         -> till .__proto__ becomes null
+        ~~this logic is followed only while reading but while writing a new variable is created in the current class and 
+        writing is done in it - shadowing: What is shadowing in JS?
+        ~~Shadowing: Now, when a variable is declared in a certain scope having the same name defined on its outer scope and 
+        when we call the variable from the inner scope, the value assigned to the variable in the inner scope is the value 
+        that will be stored in the variable in the memory space.
+        ~~suppose ob1 has a as 10 and ob2 is inheriting ob1, then ob2.a++ will give ob2 a 
+        new a with value 11 but ob1.a will remain same that is 10 and if ob3 is inherting 
+        ob2 then ob3 will get a with 11
+
 */
+
+// 10) prototypes.js
+
+let str = "Asdasd"  ;                            // 3 levels from null
+let num = 233                                   // 3 levels from null
+let bool = true                                 // 3 levels from null
+let arr = [246,436,6,346]                       // 3 levels from null
+let obj = {a: 10, b: 'asdasd'}                  // 2 levels from null
+let fun = function () { console.log ('yay!') }  // 3 levels from null
+
+// if x and y are not primitive 
+// x == y : true <- what does this mean ? 
+// this means they are reference to the same object in memory 
+
+console.log('======= types =======')
+console.log('typeof String', typeof String)
+console.log('typeof Boolean', typeof Boolean)
+console.log('typeof Number', typeof Number)
+console.log('typeof Array', typeof Array)
+console.log('typeof Object', typeof Object)
+console.log('typeof Function', typeof Function)
+
+console.log('======= proto chain =======')
+console.log(str.__proto__.__proto__ == obj.__proto__)
+console.log(num.__proto__.__proto__ == obj.__proto__)
+console.log(bool.__proto__.__proto__ == obj.__proto__)
+console.log(arr.__proto__.__proto__ == obj.__proto__)
+console.log(fun.__proto__.__proto__ == obj.__proto__)
+
+// Everything indirectly inherits from the same thing
+// that obj is inherited from 
+// i.e. in Javascript, everything is essentially an Object
+
+console.log('======= prototypes ======= ')
+console.log(obj.__proto__ == Object.prototype)
+console.log(str.__proto__ == String.prototype)
+console.log(num.__proto__ == Number.prototype)
+console.log(bool.__proto__ == Boolean.prototype)
+console.log(arr.__proto__ == Array.prototype)
+console.log(fun.__proto__ == Function.prototype)
+
+/*
+s="a"
+'a'
+s.__proto__
+String {'', constructor: ƒ, anchor: ƒ, big: ƒ, blink: ƒ, …}
+String.prototype
+String {'', constructor: ƒ, anchor: ƒ, big: ƒ, blink: ƒ, …}
+s.__proto__.__proto__
+{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+s.__proto__.__proto__.__proto__
+null
+*/
+
+/*
+ob1 = Object.create(Object.prototype);
+*/
+
+// String.prototype inherits from Object.prototype
+// typeof Object.create(Boolean.prototype) -> ??
+// 2 items can have the same proto but their typeof should be same is not necessary
+
+console.log(str.charAt(4))
+console.log(typeof str.charAt) // ? 
+let str2 = "dgndgn"
+console.log(str.charAt == str2.charAt) // true
+
+str.charAt = function () { return 'X' } // does not make a difference
+
+String.prototype.charAt = function () { return 'X' }
+console.log(str.charAt(1))
+
+// String.prototype contains all default string functions
+// like charAt, indexOf, substring, slice etc 
+
+Array.prototype.joinOriginal = Array.prototype.join
+
+Array.prototype.join = function () {
+    console.log('join called on', this)
+    return this.joinOriginal(...arguments)
+}
+/**
+ * Array.prototype 
+ * {
+ *  .... 
+ *  joinOriginal: function () {},
+ *  join: function () { our fun },
+ *  ....
+ * }
+ */

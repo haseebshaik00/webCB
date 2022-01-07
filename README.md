@@ -133,7 +133,12 @@ m) closure- parent scopes are accessible inside but not the parent's arguments v
 8) arrays can also be concated  
 9) this is bound on runtime  
 10) type casting string to number - Number()  
-11) 
+String is a function that converts any other datatype to string - String()  
+11) __proto__ : use this only for debugging  
+12) polymorphism in java is totally based on if else conditions  
+13) __proto__ is a hidden field in js but prototype is accessible  
+14) __proto__ basically gives the answer from which the value is being inherited  
+15) 
   
 
 
