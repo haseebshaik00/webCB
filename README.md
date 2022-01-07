@@ -119,7 +119,8 @@ i) json: foreach loop, forof loop,indexin loop, function declaration & expressio
 j) classes & objects- three methods of defining an object - normal, with function & with class declaration  
 k) strings- declaration types, backtick strings, functions: length, indexOf, lastIndexOf, slice, substring, substr  
 l) more array functions: length, forof loop, indexin loop, slice, splice, concat  
-m) closure- parent scopes are accessible inside but not the parent's arguments variable, this, string literal, equality, inheritance,     
+m) closure- parent scopes are accessible inside but not the parent's arguments variable, this, string literal, equality, inheritance, 
+
 
 
 ## Notes  
@@ -138,7 +139,8 @@ String is a function that converts any other datatype to string - String()
 12) polymorphism in java is totally based on if else conditions  
 13) __proto__ is a hidden field in js but prototype is accessible  
 14) __proto__ basically gives the answer from which the value is being inherited  
-15) 
+15) Only functions have prototypes not created objects  
+16) 
   
 
 

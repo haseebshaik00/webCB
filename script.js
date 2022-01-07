@@ -426,7 +426,7 @@ console.log(typeof str.charAt) // ?
 let str2 = "dgndgn"
 console.log(str.charAt == str2.charAt) // true
 
-str.charAt = function () { return 'X' } // does not make a difference
+str.charAt = function () { return 'X' } // does not make a difference - cause js doesnt allow this
 
 String.prototype.charAt = function () { return 'X' }
 console.log(str.charAt(1))
@@ -449,3 +449,7 @@ Array.prototype.join = function () {
  *  ....
  * }
  */
+
+// 11) classes.js
+
+
