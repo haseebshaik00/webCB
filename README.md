@@ -119,7 +119,8 @@ i) json: foreach loop, forof loop,indexin loop, function declaration & expressio
 j) classes & objects- three methods of defining an object - normal, with function & with class declaration  
 k) strings- declaration types, backtick strings, functions: length, indexOf, lastIndexOf, slice, substring, substr  
 l) more array functions: length, forof loop, indexin loop, slice, splice, concat  
-m) closure- parent scopes are accessible inside but not the parent's arguments variable, this, string literal, equality, inheritance, 
+m) closures- parent scopes are accessible inside but not the parent's arguments variable, this, string literal, equality, inheritance, prototypes, details in functions and classes, js callstack, setTimeout and setInterval  
+n) 
 
 
 
@@ -139,13 +140,18 @@ String is a function that converts any other datatype to string - String()
 12) polymorphism in java is totally based on if else conditions  
 13) __proto__ is a hidden field in js but prototype is accessible  
 14) __proto__ basically gives the answer from which the value is being inherited  
-15) Only functions have prototypes not created objects  
-16) 
+15) Only functions have prototypes, created objects dont  
+16) classes and objects are implemented internally as functions  
+17) to inherit classess use new terminology of classes not the old one  
+18) Is object a function in JS?
+JavaScript provides a number of built-in functions that have various purposes. Two such functions happen to be called Object and Function . So in other words Object is a function and thus also an "object" (data structure)  
+19) Object is also an function  
+20) In js we always pass values, and for non primitive the values is the reference  
+21) let and const are 2 new keywords in ecmascript  
+22) const doesnt make the entire variable immutable but does the not allows assignment permissions  
+23) const also has block scope  
+24) 
   
-
-
-https://www.coursehero.com/qa/wait/35803237/?question_id=35803237
-
 
 ## Writing README files on github
 1) https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax  

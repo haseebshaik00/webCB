@@ -293,7 +293,7 @@ let s6 = `
 
 let name = 'John'
 
-let g1 = 'Good Morning ' + name
+let g12 = 'Good Morning ' + name
 
 let g2 = `Good Morning ${name}`
 
@@ -362,11 +362,11 @@ obj3.__proto__.__proto__.__proto__.__proto__ - null
 
 // 10) prototypes.js
 
-let str = "Asdasd"  ;                            // 3 levels from null
+let str3 = "Asdasd"  ;                            // 3 levels from null
 let num = 233                                   // 3 levels from null
 let bool = true                                 // 3 levels from null
 let arr = [246,436,6,346]                       // 3 levels from null
-let obj = {a: 10, b: 'asdasd'}                  // 2 levels from null
+let obj6 = {a: 10, b: 'asdasd'}                  // 2 levels from null
 let fun = function () { console.log ('yay!') }  // 3 levels from null
 
 // if x and y are not primitive 
@@ -382,19 +382,19 @@ console.log('typeof Object', typeof Object)
 console.log('typeof Function', typeof Function)
 
 console.log('======= proto chain =======')
-console.log(str.__proto__.__proto__ == obj.__proto__)
-console.log(num.__proto__.__proto__ == obj.__proto__)
-console.log(bool.__proto__.__proto__ == obj.__proto__)
-console.log(arr.__proto__.__proto__ == obj.__proto__)
-console.log(fun.__proto__.__proto__ == obj.__proto__)
+console.log(str3.__proto__.__proto__ == obj6.__proto__)
+console.log(num.__proto__.__proto__ == obj6.__proto__)
+console.log(bool.__proto__.__proto__ == obj6.__proto__)
+console.log(arr.__proto__.__proto__ == obj6.__proto__)
+console.log(fun.__proto__.__proto__ == obj6.__proto__)
 
 // Everything indirectly inherits from the same thing
 // that obj is inherited from 
 // i.e. in Javascript, everything is essentially an Object
 
 console.log('======= prototypes ======= ')
-console.log(obj.__proto__ == Object.prototype)
-console.log(str.__proto__ == String.prototype)
+console.log(obj6.__proto__ == Object.prototype)
+console.log(str3.__proto__ == String.prototype)
 console.log(num.__proto__ == Number.prototype)
 console.log(bool.__proto__ == Boolean.prototype)
 console.log(arr.__proto__ == Array.prototype)
@@ -421,15 +421,15 @@ ob1 = Object.create(Object.prototype);
 // typeof Object.create(Boolean.prototype) -> ??
 // 2 items can have the same proto but their typeof should be same is not necessary
 
-console.log(str.charAt(4))
-console.log(typeof str.charAt) // ? 
-let str2 = "dgndgn"
-console.log(str.charAt == str2.charAt) // true
+console.log(str3.charAt(4))
+console.log(typeof str3.charAt) // ? 
+let str4 = "dgndgn"
+console.log(str3.charAt == str4.charAt) // true
 
-str.charAt = function () { return 'X' } // does not make a difference - cause js doesnt allow this
+str3.charAt = function () { return 'X' } // does not make a difference - cause js doesnt allow this
 
 String.prototype.charAt = function () { return 'X' }
-console.log(str.charAt(1))
+console.log(str3.charAt(1))
 
 // String.prototype contains all default string functions
 // like charAt, indexOf, substring, slice etc 
@@ -451,5 +451,125 @@ Array.prototype.join = function () {
  */
 
 // 11) classes.js
+
+class Person {
+    constructor(name, age) {
+      this.name = name
+      this.age = age
+    }
+  
+    isAdult() {
+      return this.age >= 18
+    }
+  }
+  
+  let p1 = new Person('John Doe', 22)
+  let p2 = new Person('Jane Doe', 15)
+  
+  console.log(typeof Person) // function; there is NO new datatype called 'class'
+  console.log(p1.__proto__ == Person.prototype) // true
+  console.log(p1.__proto__.__proto__ == Object.prototype) // true
+  
+  class Student extends Person {
+    constructor(name, age, grade) {
+      super(name, age)
+      this.grade = grade
+    }
+  }
+  
+  let s11 = new Student('Harry Potter', 13, 5)
+  let s22 = new Student('Hermoine Granger', 14, 6)
+  
+  console.log(s11.__proto__ == Student.prototype)
+  console.log(s11.__proto__.__proto__ == Person.prototype)
+  console.log(s11.__proto__.__proto__.__proto__ == Object.prototype)
+  
+  // inheritance chain 
+  // Object.prototype -> Person.prototype -> Student.prototype
+  
+  // no inheritance between the classes (actually they are functions)
+  // Object -x-> Person -x-> Student
+
+  function Person2 (name, age) {
+    this.name = name 
+    this.age = age
+}
+
+function Student2 () { // no need to inherit using funcs
+
+}
+
+let p11 = new Person2('John Doe', 22)
+// new keyword is not required to call the function but in classes it is
+
+
+// 12) promises.js
+function fakedownload (done){
+    setTimeout(function(){
+        let downloadedData1 =  "file.txt";
+        done(downloadedData1);
+    }, 1000)
+}
+
+fakedownload(function (data){
+    console.log("download this file --->> ");
+    console.log(data);
+});
+
+function fakePromise(correct){
+    return new Promise( function(resolve, reject){
+        setTimeout(function(){
+            let downloadedData1 =  "file.txt";
+            if(correct) 
+                resolve(downloadedData1);
+            else 
+                reject(new Error("Couldn't download file"));
+        }, 1000);
+    })          
+}
+
+fakePromise(true).then( function (data){
+    console.log("download this file --->> ");
+    console.log(data);
+}).catch(function(err){
+    console.log(err);
+});
+
+
+// if you dont want to write the then function you can use setTimeout outside scope
+// and use it as a then func
+
+function fakePromise(correct){
+    return new Promise( function(resolve, reject){
+        setTimeout(function(){
+            let downloadedData1 =  "file.txt";
+            if(correct) 
+                resolve(downloadedData1);
+            else 
+                reject(new Error("Couldn't download file"));
+        }, 1000);
+    })          
+}
+
+let d1 = fakePromise(true);
+d1.catch(function(err){
+    console.log(err);
+})
+
+setTimeout(function(){
+    d1.then( function (data){
+        console.log("download this file --->> ");
+        console.log(data);
+    });
+}, 3000);
+
+
+// 13) iife.js
+// immediately invoked function expression
+
+function sayHello(){
+    console.log("hello");
+}
+
 
 
