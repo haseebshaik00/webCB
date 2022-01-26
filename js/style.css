@@ -1,0 +1,22 @@
+html, body{
+    background-color: #B1F9F2;
+    height: 100%;
+    margin: 0;
+}
+
+.box{
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    color: darkorchid; 
+    margin: auto;
+    width: 70%;
+    margin-top: 10%;
+    height: fit-content;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    word-break: break-all;
+}

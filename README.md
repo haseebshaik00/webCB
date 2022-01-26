@@ -120,8 +120,10 @@ j) classes & objects- three methods of defining an object - normal, with functio
 k) strings- declaration types, backtick strings, functions: length, indexOf, lastIndexOf, slice, substring, substr  
 l) more array functions: length, forof loop, indexin loop, slice, splice, concat  
 m) closures- parent scopes are accessible inside but not the parent's arguments variable, this, string literal, equality, inheritance, prototypes, details in functions and classes, js callstack, setTimeout and setInterval  
-n) 
 
+
+**7) DOM + jQuery**
+  
 
 
 ## Notes  
@@ -148,8 +150,8 @@ JavaScript provides a number of built-in functions that have various purposes. T
 19) Object is also an function  
 20) In js we always pass values, and for non primitive the values is the reference  
 21) let and const are 2 new keywords in ecmascript  
-22) const doesnt make the entire variable immutable but does the not allows assignment permissions  
-23) const also has block scope  
+22) const doesnt make the entire variable immutable but does the not allows assignment permissions and const also has block scope  
+23) 
 24) 
   
 
