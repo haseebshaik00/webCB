@@ -120,10 +120,11 @@ j) classes & objects- three methods of defining an object - normal, with functio
 k) strings- declaration types, backtick strings, functions: length, indexOf, lastIndexOf, slice, substring, substr  
 l) more array functions: length, forof loop, indexin loop, slice, splice, concat  
 m) closures- parent scopes are accessible inside but not the parent's arguments variable, this, string literal, equality, inheritance, prototypes, details in functions and classes, js callstack, setTimeout and setInterval  
+o) Unlike what common belief suggests, the delete operator has nothing to do with directly freeing memory […] delete is only effective on an object’s properties. It has no effect on variable or function names.  
 
 
 **7) DOM + jQuery**
-  
+
 
 
 ## Notes  
