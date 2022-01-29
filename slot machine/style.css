@@ -23,10 +23,13 @@
 }
 
 .slotText{
-    margin-top: 30%;
-    font-size: 100pt;
+    font-size: 220pt;
     z-index: 2;
-    animation: spin infinite linear 0.6s;
+    color: #704241;
+}
+
+.slotTextAnimation{
+    animation: spin infinite linear 0.3s;
 }
 
 @keyframes spin {
@@ -54,7 +57,7 @@
     margin: 30px;
     font-size: 30pt;
     padding: 45px;
-    box-shadow: grey 10px 10px 5px;
+    box-shadow: lightgrey 10px 10px 10px;
     transition: 0.8s;
     border: solid white 1px;
     border-radius: 20px;
@@ -66,17 +69,13 @@
     color: black;
     margin: 30px;
     font-size: 30pt;
+    font-weight: bolder;
     padding: 45px;
-    box-shadow: grey 10px 10px 5px;
+    box-shadow: lightgrey 10px 10px 5px;
     transition: 0.8s;
+    color: #704241;
     border: solid white 1px;
-    border-radius: 20px;
-}
-
-.btn:hover{
-    transform: translate(-10px,-10px);
-    box-shadow: grey 20px 20px 10px;
-    transition: 0.5s;
+    border-radius: 20px;    
 }
 
 .btn:active{

@@ -124,8 +124,10 @@ o) Unlike what common belief suggests, the delete operator has nothing to do wit
 
 
 ## Nodejs
-1) the outer most scope in browser is window and in node terminal is global  
-2) stuff like window, document, window.location, window.localStorage are not available in terminal
+1) js interpreter running in terminal  
+2) the outer most scope in browser is window and in node terminal is global  
+3) stuff like window, document, window.location, window.localStorage are not available in terminal
+4) 
 
 
 ## Notes  
@@ -165,6 +167,8 @@ using event.target.value, you can do other things also by exploring event.target
 // document.documentElement.style.setProperty('--speed', event.target.value)  
 https://github.com/haseebshaik00/FullStack_NodeJS_Live_March2020/tree/master/Lecture10/game-slot-machine
 30) check .onChange() in js too 
+31) you can use .addClass and .removeClass in jquery to add and remove classes  
+32) 
 
   
 
