@@ -146,3 +146,20 @@ $(() => {
         })
     })
 })
+
+
+// traverse in a list
+let x = document.getElementById("oneTwo"); // one two
+
+// imagine your DOM as a tree and hence decide your path
+console.log(x.previousElementSibling); // one one
+console.log(x.nextElementSibling); // one three
+console.log(x.previousSibling); // space between one two and one three
+console.log(x.parentElement); // ul element
+console.log(x.parentElement.parentElement); // li of one
+
+console.log(x.parentElement.parentElement.nextElementSibling); // li of two
+console.log(x.parentElement.parentElement.nextElementSibling.children[0]); // ul of two
+console.log(x.parentElement.parentElement.nextElementSibling.children[0].chilren); // array of two children
+
+
