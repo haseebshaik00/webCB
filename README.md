@@ -123,10 +123,6 @@ m) closures- parent scopes are accessible inside but not the parent's arguments 
 o) Unlike what common belief suggests, the delete operator has nothing to do with directly freeing memory […] delete is only effective on an object’s properties. It has no effect on variable or function names.  
 
 
-**7) DOM + jQuery**
-
-
-
 ## Notes  
 1) provide same name for a particular section of radio buttons to select only one radio button  
 2) to select a checkbox just by clicking the text you can use target the label "for" attribute with input's id  
@@ -153,7 +149,6 @@ JavaScript provides a number of built-in functions that have various purposes. T
 21) let and const are 2 new keywords in ecmascript  
 22) const doesnt make the entire variable immutable but does the not allows assignment permissions and const also has block scope  
 23) Make sure to load the jQuery script before your own script  
-24) 
   
 
 ## Writing README files on github

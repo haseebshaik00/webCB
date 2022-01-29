@@ -43,6 +43,8 @@ dee.appendChild(m1.parentElement)
 
 m1.remove
 dee.previousElementSibling.previousElementSibling.children[0].appendChild(m1)
+
+// li parent element gives li tag 
 */
 
 // innerHTML performance
