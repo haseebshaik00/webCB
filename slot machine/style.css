@@ -1,0 +1,86 @@
+.container{
+    background-color:crimson;
+    width: 1000px;
+    height: 400px;
+    display: flex;
+    margin-top: 2%;
+    justify-content: center;
+    border-radius: 30px;
+    padding: 20px;
+    z-index: 3;
+}
+
+.slot{
+    background-color: bisque;
+    width: 250px;
+    height: 320px;
+    margin: 20px;
+    padding: 20px;
+    border: 3px solid cornsilk;
+    border-radius: 50px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.slotText{
+    margin-top: 30%;
+    font-size: 100pt;
+    z-index: 2;
+    animation: spin infinite linear 0.6s;
+}
+
+@keyframes spin {
+    0%{
+        transform: translateY(-300px);
+    }
+    100%{
+        transform: translateY(300px);
+    }
+}
+
+.insideContainer{
+    width: 800px;
+    height: 200px;
+    margin-top: 1.5%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn{
+    width: 130px;
+    background-color: crimson;
+    color: white;
+    margin: 30px;
+    font-size: 30pt;
+    padding: 45px;
+    box-shadow: grey 10px 10px 5px;
+    transition: 0.8s;
+    border: solid white 1px;
+    border-radius: 20px;
+}
+
+.btn1{
+    width: 400px;
+    background-color: bisque;
+    color: black;
+    margin: 30px;
+    font-size: 30pt;
+    padding: 45px;
+    box-shadow: grey 10px 10px 5px;
+    transition: 0.8s;
+    border: solid white 1px;
+    border-radius: 20px;
+}
+
+.btn:hover{
+    transform: translate(-10px,-10px);
+    box-shadow: grey 20px 20px 10px;
+    transition: 0.5s;
+}
+
+.btn:active{
+    transform: translate(10px,10px);
+    box-shadow: grey 5px 5px 5px;
+    transition: 0.2s;
+}

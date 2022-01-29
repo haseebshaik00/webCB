@@ -123,6 +123,11 @@ m) closures- parent scopes are accessible inside but not the parent's arguments 
 o) Unlike what common belief suggests, the delete operator has nothing to do with directly freeing memory […] delete is only effective on an object’s properties. It has no effect on variable or function names.  
 
 
+## Nodejs
+1) the outer most scope in browser is window and in node terminal is global  
+2) stuff like window, document, window.location, window.localStorage are not available in terminal
+
+
 ## Notes  
 1) provide same name for a particular section of radio buttons to select only one radio button  
 2) to select a checkbox just by clicking the text you can use target the label "for" attribute with input's id  
@@ -149,6 +154,18 @@ JavaScript provides a number of built-in functions that have various purposes. T
 21) let and const are 2 new keywords in ecmascript  
 22) const doesnt make the entire variable immutable but does the not allows assignment permissions and const also has block scope  
 23) Make sure to load the jQuery script before your own script  
+24) transform translate doesn't work on inline elements  
+25) We can use css variables through js but the other way around is not possible  
+26) calc() is used to perform operations usually mathematical in CSS  
+27) Custom properties (sometimes referred to as CSS variables or cascading variables) are entities defined by CSS authors that contain specific values to be reused throughout a document. They are set using custom property notation (e.g., --main-color: black;) and are accessed using the var() function (e.g., color: var(--main-color);)  
+28) if we want to see the changes done on performing the functions in js just write event inside the function argument and access it 
+using event.target.value, you can do other things also by exploring event.target  
+29) you can change values of css using js function setProperty and css variable and root
+// document.documentElement this is the :root of css
+// document.documentElement.style.setProperty('--speed', event.target.value)  
+https://github.com/haseebshaik00/FullStack_NodeJS_Live_March2020/tree/master/Lecture10/game-slot-machine
+30) check .onChange() in js too 
+
   
 
 ## Writing README files on github
