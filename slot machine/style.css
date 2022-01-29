@@ -29,7 +29,7 @@
 }
 
 .slotTextAnimation{
-    animation: spin infinite linear 0.3s;
+    animation: spin infinite linear 0.15s;
 }
 
 @keyframes spin {
@@ -81,5 +81,5 @@
 .btn:active{
     transform: translate(10px,10px);
     box-shadow: grey 5px 5px 5px;
-    transition: 0.2s;
+    transition: 0.1s;
 }

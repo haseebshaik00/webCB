@@ -20,6 +20,9 @@ vi) data exchange formats - json and xml
 e) Website design principles - reactive websites, single-page websites, MVC,MVP,MVMM and MV* architecture and web application framework  
 f) latest developments - VirtualDOM, ShadowDOM, Sockets, Pub/Sub, Push Notifications, Browser Native APIs(Location, User Data)  
   
+<br><br>
+
+## FrontEnd    
 
 **2) HTML**  
 a) html5 boilerplate and description of each element and attribute in it  
@@ -121,8 +124,10 @@ k) strings- declaration types, backtick strings, functions: length, indexOf, las
 l) more array functions: length, forof loop, indexin loop, slice, splice, concat  
 m) closures- parent scopes are accessible inside but not the parent's arguments variable, this, string literal, equality, inheritance, prototypes, details in functions and classes, js callstack, setTimeout and setInterval  
 o) Unlike what common belief suggests, the delete operator has nothing to do with directly freeing memory […] delete is only effective on an object’s properties. It has no effect on variable or function names.  
+<br><br>
 
-
+## Backend  
+  
 ## Nodejs
 1) js interpreter running in terminal  
 2) the outer most scope in browser is window and in node terminal is global  
@@ -130,6 +135,7 @@ o) Unlike what common belief suggests, the delete operator has nothing to do wit
 4) 
 
 
+<br><br>
 ## Notes  
 1) provide same name for a particular section of radio buttons to select only one radio button  
 2) to select a checkbox just by clicking the text you can use target the label "for" attribute with input's id  
@@ -171,7 +177,7 @@ https://github.com/haseebshaik00/FullStack_NodeJS_Live_March2020/tree/master/Lec
 32) 
 
   
-
+<br><br>
 ## Writing README files on github
 1) https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax  
 2) https://levelup.gitconnected.com/github-readme-cheatsheet-617dff61fa23

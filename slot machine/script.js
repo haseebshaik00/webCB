@@ -15,6 +15,7 @@ $(() => {
         play.innerText = "Spinning...";
         let count = 0;
         $('.slotText').addClass('slotTextAnimation');
+        $('#textBtn').css('color', '#704241');
         let spinInterval = setInterval(() => {
                 value1.innerText = values[getRandomNumber()];
                 value2.innerText = values[getRandomNumber()];
@@ -28,6 +29,7 @@ $(() => {
                     {
                         console.log("win");
                         play.innerText = "You Won!";
+                        $('#textBtn').css('color', 'green');
                     }
                     else
                         {
@@ -36,9 +38,10 @@ $(() => {
                             console.log(value3.innerText);
                             console.log("lost");
                             play.innerText = "You Lost!";
+                            $('#textBtn').css('color', 'maroon');
                         }
                 }
-            }, 300);
+            }, 150);
     }
 })
 
