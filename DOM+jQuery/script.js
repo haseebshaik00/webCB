@@ -29,7 +29,7 @@ p2.setAttribute('spellcheck',false);
 
 // traverse, replace and remove
 /* can be used to traverse in stuff like list where you have parent and child basically
-let m = 1; // a list element basically
+let m = 1; // a list element basically which is selected from console
 m.parentElement;
 m.children;
 m.previousElementSibling;
@@ -55,4 +55,92 @@ window.onload = function ()
     i1.onclick = function(){
         i1.innerHTML = "b";
     }
-} // always reduce number of times you are calling innerHTML
+} // always reduce number of times you are calling innerHTML - takes a lot of time in processing
+
+
+//createElement - instead of innerHTML try to use a combination of createElement and appendChild - also the
+// combination differs from case to case
+let item = document.createElement('li');
+
+//remove button on click
+let xBtn = document.createElement('button');
+xBtn.innerText = 'x';
+xBtn.onclick = function(event){
+    event.target.parentElement.remove();
+}
+
+//move the todo up 
+let xBtn1 = document.createElement('button');
+xBtn1.innerText = 'Up';
+xBtn1.onclick = function(event){
+    event.target.parentElement.parentElement.insertBefore(
+        event.target.parentElement, event.target.parentElement.previousSibling
+    );
+}
+
+// -------- jQuery --------
+//jQuery - helps in DOM manipulation; hiding, showing stuff; toggling stuff
+// jQuery also helps in AJAX - without changing the page req to backend and fetch data from API and stuff   
+
+$; // jQuery
+
+// selectors
+$('p'); //here the selectors works same as css attribute selector
+$('.class1'); 
+$('#school'); //returns object(array with all the required tags given) whereas getElementById('school') returns 
+//tags with contents inside it. the object's first element is equal to getElementById('school')
+
+
+//changing attributes and style
+let x = $('#school');
+x.text(); // returns text
+x.text('bob'); // changes text
+x.html(); // returns text with tags
+x.html("<b> bob </b>"); // changes text .. we can also include html tags in this
+x.attr('height'); // returns height
+x.attr('height', '800'); // sets height
+x.attr('style', 'color:red');
+x.css('color');
+x.css('color', 'blue');
+x.css('font-size', '20pt').attr('width', '200');
+
+//appending and prepending
+// $(() => {}) if your script tag and jquery is inlcuded in head, then use this as this works when the whole window is loaded/ready
+// anything you want to do with DOM, you can directly start writing the script file or jquery commands if your 
+// jquery and script tag is mentioned in the body 
+
+// appending and prepending
+/*
+    <input id="item" type="text">
+    <button id="prepend"></button>
+    <button id="append"></button>
+    <ul id="list"></ul>
+*/
+$(() => {
+    // we can write functions in two ways
+    $('#prepend').click(() => {
+        let text1 = $('#item').val(); //val() returns the value and val("adfa") sets the value
+        //$('#list').prepend($('<li> ${text1} </li>')); // element creater not a selector as jquery can detect the starting <
+        $('#list').prepend($('<li>').text(text1));
+    })
+    $('#append').click(() => {
+        let text1 = $('#item').val();
+        $('#list').append($('<li>').text(text1));
+    })
+})
+
+
+// --------- AJAX ---------
+// mmakes xhr = xml http req
+$(() => {
+    $('#fetch').click(() =>{
+        //asynchronous get req .. this is an asynchronous func hence we will recieve the result in a callback
+        $.get("https://newsapi.org/v2/everything?q=tesla&from=2021-12-29&sortBy=publishedAt&apiKey=09aa6966a0724e0697d17efa3ddb62a9", 
+        (data) => {
+            console.log(data);
+            data.articles.forEach(function(i){
+                $('#list1').append($('<li>').text(i.title));
+            });
+        })
+    })
+})

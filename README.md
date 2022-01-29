@@ -152,7 +152,7 @@ JavaScript provides a number of built-in functions that have various purposes. T
 20) In js we always pass values, and for non primitive the values is the reference  
 21) let and const are 2 new keywords in ecmascript  
 22) const doesnt make the entire variable immutable but does the not allows assignment permissions and const also has block scope  
-23) 
+23) Make sure to load the jQuery script before your own script  
 24) 
   
 
