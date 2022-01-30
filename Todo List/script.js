@@ -23,18 +23,24 @@ function addItem(){
     }
 }
 
-newTask.keypress((e) => {
-    if(e.which == 13) addItem();
-})
-
 $(() => {
     btnAdd.click(() => {
         addItem();
+    })
+
+    newTask.keypress((e) => {
+        if(e.which == 13) addItem();
     })
 
     btnClear.click(() => {
         newTask.val('');
     })
 
+    btnClean.click(() => {
+        $('#ulTasks .done').remove();
+    })
 
+    btnSort.click(() => {
+        $('#ulTasks .done').appendTo('#ulTasks');
+    })
 })

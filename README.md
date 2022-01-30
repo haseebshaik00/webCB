@@ -175,7 +175,7 @@ https://github.com/haseebshaik00/FullStack_NodeJS_Live_March2020/tree/master/Lec
 30) check .onChange() in js too 
 31) you can use .addClass and .removeClass in jquery to add and remove classes  
 32) hungarian type of writing variables - first write the type then the use of that variable/func/type  
-33)   
+33) make buttons abled disabled using prop() in jquery
 
   
 <br><br>
