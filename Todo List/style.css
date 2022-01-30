@@ -1,0 +1,26 @@
+.box{
+    margin: 5%;
+    padding: 2%;
+    background-color: bisque;
+    border-radius: 20px;
+}
+
+#boxId{
+    padding: 4%;
+    width: 90%;
+}
+
+.heading{
+    font-size: 30pt;
+    font-style: italic;
+    font: optional;
+}
+
+.buttonStyle{
+    width: 100%;
+}
+
+#ulTasks li.done{
+    text-decoration: line-through;
+    color: gray;
+}

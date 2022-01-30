@@ -174,7 +174,8 @@ using event.target.value, you can do other things also by exploring event.target
 https://github.com/haseebshaik00/FullStack_NodeJS_Live_March2020/tree/master/Lecture10/game-slot-machine
 30) check .onChange() in js too 
 31) you can use .addClass and .removeClass in jquery to add and remove classes  
-32) 
+32) hungarian type of writing variables - first write the type then the use of that variable/func/type  
+33)   
 
   
 <br><br>
