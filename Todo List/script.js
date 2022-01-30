@@ -5,7 +5,6 @@ let btnClear = $('#btnClear');
 let btnSort = $('#btnSort');
 let btnClean = $('#btnClean');
 
-
 function addItem(){
     if(newTask.val() == '')
         alert("Task cannot be empty!");
@@ -24,10 +23,8 @@ function addItem(){
     }
 }
 
-newTask.keyPress((e) => {
-    if(e.which == 13){
-        addItem();
-    }
+newTask.keypress((e) => {
+    if(e.which == 13) addItem();
 })
 
 $(() => {
