@@ -10,7 +10,7 @@ function addItem(){
     if(newTask.val() == '')
     {
         let newItem = $('<li></li>',{   
-            'class': 'list-group-item',
+            'class': 'list-group-item mt-3 mb-3',
             'id' : 'errorList',
             text : "Task can't be empty!"
         })
