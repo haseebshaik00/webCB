@@ -178,7 +178,10 @@ https://github.com/haseebshaik00/FullStack_NodeJS_Live_March2020/tree/master/Lec
 31) you can use .addClass and .removeClass in jquery to add and remove classes  
 32) hungarian type of writing variables - first write the type then the use of that variable/func/type  
 33) make buttons abled disabled using prop() in jquery https://github.com/coding-blocks-archives/Project-TodoList-Bootstrap-jQuery/blob/master/script.js  
-34) 
+34) functions can be written as function{} or () => {}  
+35) https://jaketrent.com/post/javascript-arrow-function-return-rules  
+36) js is a single thread application, if that thread stops nothing works   
+37) 
 
   
 <br><br>
