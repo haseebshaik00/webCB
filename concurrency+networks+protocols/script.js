@@ -57,7 +57,7 @@ function sayHello2(times, name){
                 clearInterval(loopId);
                 resolve();
             }
-        }, 2000);
+        }, 100);
     })
 }
 
@@ -75,17 +75,32 @@ sayHello2(3, "haseeb")
 //sequential
 sayHello2(3, "haseeb")
     .then(() => sayHello2(2, "kunal"))
-    .then(() => sayHello2(3, "lakshit"));
+    .then(() => sayHello2(3, "lakshit"));*/
 
 // async-await - accepts promises resove func
 async function task(){
     await sayHello2(3, "haseeb");
     await sayHello2(2, "kunal");
-    await sayHello2(1, "spike");
+    sayHello2(1, "spike");
     await sayHello2(2, "lakshit");
 }
 
 task();
 // await makes the task execute sequentially and it can be written only inside async function 
-// if a normal sayHello is written is written with task(); the sayHello runs parallely with the async func  
+// .. if a normal sayHello is written is written with task(); the sayHello runs parallely with the async func 
+// here the function with no await will run parallely
 
+async function task1(){
+    await Promise.all([ 
+        sayHello2(3, "haseeb"),
+        sayHello2(2, "kunal")
+    ]);
+    console.log("--- first batch over ---")
+    await Promise.all([ 
+        sayHello2(1, "spike"),
+        sayHello2(2, "lakshit")
+    ]);
+}
+
+// Promise.all is used wheh we want some functions to run in batch, here haseeb and kunal will complete their process and then 
+// ... only spike and lakshit will start executing
