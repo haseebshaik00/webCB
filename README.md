@@ -190,7 +190,8 @@ https://github.com/haseebshaik00/FullStack_NodeJS_Live_March2020/tree/master/Lec
 38) We have a layout engine in our browser that reads the html and css and forms the webpage, chrome and opera - blink 
 firefox - gecko, edge - trident  
 39) the browser has a layout engine and a js engine/interpreter in this js engine has a console, DOM : document object model - (object-document) helps to manipulate html and css of the website and BOM : browser object model (object - window) all of our code runs inside the BOM  
-40) 
+40) asynchronous functions have callback and this functions cannot be assigned to a variable  
+41)  
 
   
 <br><br>
