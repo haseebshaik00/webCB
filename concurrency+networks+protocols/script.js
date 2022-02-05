@@ -75,7 +75,7 @@ sayHello2(3, "haseeb")
 //sequential
 sayHello2(3, "haseeb")
     .then(() => sayHello2(2, "kunal"))
-    .then(() => sayHello2(3, "lakshit"));*/
+    .then(() => sayHello2(3, "lakshit"));
 
 // async-await - accepts promises resove func
 async function task(){
@@ -104,3 +104,9 @@ async function task1(){
 
 // Promise.all is used wheh we want some functions to run in batch, here haseeb and kunal will complete their process and then 
 // ... only spike and lakshit will start executing
+
+
+// networks, protocols and hardware
+// gothrough the README.md file for this
+// read behrouz fehrouzan book for IP Addresses
+// also watch gate smashers playlist   

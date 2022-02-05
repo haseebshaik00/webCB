@@ -181,7 +181,8 @@ https://github.com/haseebshaik00/FullStack_NodeJS_Live_March2020/tree/master/Lec
 34) functions can be written as function{} or () => {}  
 35) https://jaketrent.com/post/javascript-arrow-function-return-rules  
 36) js is a single thread application, if that thread stops nothing works   
-37) 
+37) The 64.0.0.0 ip address is used to identify the host and the 64.255.255.255 is used for broadcasting purposes  
+38) 
 
   
 <br><br>
