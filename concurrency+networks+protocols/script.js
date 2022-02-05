@@ -175,7 +175,8 @@ download("someurl.com")
         })
     })
 
-// .. this can also be written as 
+// .. this can also be written as .. here as the function the function(filename) is same as resize(filename)
+// .. hence we can omit the function(filename) part and directly write resize
 
 download("someurl.com")
     .then(resize)
