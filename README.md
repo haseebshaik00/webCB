@@ -132,9 +132,14 @@ o) Unlike what common belief suggests, the delete operator has nothing to do wit
   
 ## Nodejs
 1) js interpreter running in terminal  
-2) the outer most scope in browser is window and in node terminal is global  
+2) the outer most scope in browser is window and in node terminal it is global  
 3) stuff like window, document, window.location, window.localStorage are not available in terminal
-4) 
+4) basically the DOM in browser js doesnt exist in node and BOM(window) scope of browser became global in the terminal  
+5) the console of browser became the terminal in node  
+6) chrome js engine (V8 engine) + file system + network + http = nodejs  
+7) node is internally written using c++ and the node environment is a WORA/WORE write once run anywhere/everywhere environment   
+8) npm - node package manager ; use to install nodejs libs on our program  
+9) 
 
 
 <br><br>
@@ -182,7 +187,10 @@ https://github.com/haseebshaik00/FullStack_NodeJS_Live_March2020/tree/master/Lec
 35) https://jaketrent.com/post/javascript-arrow-function-return-rules  
 36) js is a single thread application, if that thread stops nothing works   
 37) The 64.0.0.0 ip address is used to identify the host and the 64.255.255.255 is used for broadcasting purposes  
-38) 
+38) We have a layout engine in our browser that reads the html and css and forms the webpage, chrome and opera - blink 
+firefox - gecko, edge - trident  
+39) the browser has a layout engine and a js engine/interpreter in this js engine has a console, DOM : document object model - (object-document) helps to manipulate html and css of the website and BOM : browser object model (object - window) all of our code runs inside the BOM  
+40) 
 
   
 <br><br>
