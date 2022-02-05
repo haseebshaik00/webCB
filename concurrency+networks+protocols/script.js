@@ -21,7 +21,8 @@ function sayHello(times, name){
 sayHello(3, "haseeb");
 sayHello(2, "kunal");
 
-// to rectify the above error we can use asynchronous callback functions
+// both haseeb and kunal execute parallely; to rectify the above error we can use asynchronous callback functions
+// async function
 function sayHello1(times, name, doneSaying){
     let c=0;
     let loopId = setInterval(() => {
@@ -30,7 +31,7 @@ function sayHello1(times, name, doneSaying){
         if(c === times)
         {
             clearInterval(loopId);
-            doneSaying();
+            doneSaying(); // called at the end of the current callback
         }
     }, 100);
 }
@@ -45,7 +46,10 @@ sayHello1(3, "haseeb", () => {
 })
 // the main problem here is we will face shadowing of variables
 
+
+
 // instead of this we can also use promises introduced in es6
+// promise
 function sayHello2(times, name){
     return new Promise((resolve, reject) => {
         let c=0;
@@ -55,7 +59,7 @@ function sayHello2(times, name){
             if(c === times)
             {
                 clearInterval(loopId);
-                resolve();
+                resolve(); // this is used to call then function
             }
         }, 100);
     })
@@ -109,4 +113,74 @@ async function task1(){
 // networks, protocols and hardware
 // gothrough the README.md file for this
 // read behrouz fehrouzan book for IP Addresses
-// also watch gate smashers playlist   
+// also watch gate smashers playlist  
+
+
+// aysnc func and promises 
+
+// async func and promises blueprint
+/*
+asyncFunc = function(done){
+    ....
+    ....
+    done(); // here done is a callback function
+} 
+
+downloadPromise.then( function(){ 
+
+})
+// here downloadPromise returns a promise object and the then object is executed
+// .. the then is same as done here
+
+*/
+
+// promises advantage is it doesnt cause shadowing of variables and provides us deferred resolve which 
+// .. normal async callback doesnt do
+// https://online.codingblocks.com/app/player/220561/content/215180/6506/lecture
+// .. refer this link for overall explainaition of promises
+
+// Promise.all takes array of promises and returns result of the array of promises 
+/*
+    Promise.all([
+        download(""),
+        download(""),
+        download("")
+    ]).then(function(values){
+        return Promise.all(values.map(resize))
+    })
+    
+    //.. instead of writing  we can directly write 
+    //.. instead of writing values.map(function(item){ return resize(item)}) we can directly write values.map(resize)
+*/
+
+// if any one of the then stops it goes to catch
+// the then runs only when all three downloads are finished, this is the feature of then 
+
+
+// shorthand for calling then()
+/* 
+
+function download(url){
+    resolve(filename)
+}
+
+function resize(){
+    resolve(resizedFilename)
+}
+
+download("someurl.com")
+    .then(function(filename){
+        resize(filename).then(function (resizedFilename){
+            console.log("resized file is at : " + resizedFilename);
+        })
+    })
+
+// .. this can also be written as 
+
+download("someurl.com")
+    .then(resize)
+    .then(function(resizedFilename){
+            console.log("resized file is at : " + resizedFilename);
+    })
+
+*/

@@ -535,7 +535,9 @@ fakePromise(true).then( function (data){
     console.log(err);
 });
 
-
+// here inside then = resolve and inside catch = reject 
+// then(function(data){}) = then(resolve(downloadedData1))
+// catch(function(err){}) = then(reject(err){})
 // if you dont want to write the then function you can use setTimeout outside scope
 // and use it as a then func
 
@@ -552,10 +554,15 @@ function fakePromise(correct){
 }
 
 let d1 = fakePromise(true);
+
+// catch defined
 d1.catch(function(err){
     console.log(err);
 })
 
+
+// the promise is already reolved and this then can be executed afterwards also whenever we want
+// .. this is called as deferred resolve
 setTimeout(function(){
     d1.then( function (data){
         console.log("download this file --->> ");
