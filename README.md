@@ -141,6 +141,17 @@ o) Unlike what common belief suggests, the delete operator has nothing to do wit
 8) npm - node package manager ; use to install nodejs libs on our program  
 9) 
 
+20) Commands  
+npm init - downloads the package.json
+npm install express --save - downloads and installs express
+node app.js - to run node on terminal    
+
+## Expressjs
+1) express - web framework for node ; web framework are use to make web servers  
+2) web server gives the response back to the one who makes request  
+3) to render templates we write res.render() not res.send()  
+4) 
+
 
 <br><br>
 ## Notes  
@@ -191,7 +202,8 @@ https://github.com/haseebshaik00/FullStack_NodeJS_Live_March2020/tree/master/Lec
 firefox - gecko, edge - trident  
 39) the browser has a layout engine and a js engine/interpreter in this js engine has a console, DOM : document object model - (object-document) helps to manipulate html and css of the website and BOM : browser object model (object - window) all of our code runs inside the BOM  
 40) asynchronous functions have callback and this functions cannot be assigned to a variable  
-41)  
+41) port for http request : 80  
+42) 
 
   
 <br><br>
