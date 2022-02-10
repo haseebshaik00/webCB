@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 Encryption</title>
+</head>
+<body>
+    <form action="/answer" method="GET">
+        <textarea name="inpCode" id="inpCode" cols="30" rows="10"></textarea>
+        <br>
+        <button type="button" id="encoBtn">ENCODE</button>
+        <br><br>
+        <label for="">Base64 Format:</label>
+        <input type="text" name="outCode" id="outCode" style="width: 600px;">
+        <br>
+        <button type="button" id="encrBtn">ENCRYPT</button>
+        <br><br>
+        <label for="">Encrypted Format:</label>
+        <input type="text" name="outEncryptCode" id="outEncryptCode" style="width: 600px;">
+        <br><br><br>
+        <button type="submit" id="decBtn">DECRYPT</button>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script async defer src="script.js"></script>
+</body>
+</html>
