@@ -1,0 +1,14 @@
+{
+  "name": "base64_encryption",
+  "version": "1.0.0",
+  "description": "Base 64 and Encryption",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shaik Haseeb Ur Rahman",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
