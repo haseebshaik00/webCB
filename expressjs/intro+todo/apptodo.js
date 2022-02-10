@@ -3,7 +3,7 @@ const express = require('express'),
 
 app.use(express.urlencoded({ extended : true}));
 app.set('view engine', 'hbs');
-app.set('views','expressjs/views');
+app.set('views',__dirname + '/views');
 
 let taskList = ['inbuilt task'];
 
@@ -22,6 +22,6 @@ app.post("/", (req, res) => {
     res.redirect("/");
 });
 
-app.listen(4444, (req,res) => {
+app.listen(4445, (req,res) => {
     console.log("server started");
 });

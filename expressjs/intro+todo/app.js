@@ -14,7 +14,7 @@ app.get("/", (req,res) => {
 
 app.get("/hi", (req,res) => {
     let guest = "haseeb";
-    //console.log(req);
+    console.log(req);
     console.log(req.headers);
     console.log(req.url);
     console.log(req.query);
@@ -28,13 +28,14 @@ app.get("/hi", (req,res) => {
 });
 
 app.post("/hi", (req,res) => {
-    // prints undefined with urlencoded body parser
+    // prints undefined without urlencoded body parser
+    // req.body is used in post requests
     console.log(req.body);
     res.send("Hi " + req.body.name);
 });
 
 app.get("/form", (req,res) => { 
-    res.sendFile(__dirname + '/form.html');
+    res.sendFile(__dirname + '/public/form.html');
 });
 
 // variables in the url with : are called as url path parameters and access thorugh req.params
@@ -56,5 +57,5 @@ app.listen(4444, () => {
     // .. my own ip address : 4444 - others connected to the same wifi can also access this
     // .. 0.0.0.0:4444 - 0.0.0.0 : is ip address of my own comp
     // .. 127.0.0.1:4444 - 127.0.0.1 : is ip address of my own comp
-    console.log("Server started on port http://localhost:4445");
+    console.log("Server started on port http://localhost:4444");
 }); 
