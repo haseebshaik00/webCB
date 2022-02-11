@@ -138,9 +138,7 @@ o) Unlike what common belief suggests, the delete operator has nothing to do wit
 7) node is internally written using c++ and the node environment is a WORA/WORE write once run anywhere/everywhere environment   
 8) npm - node package manager ; use to install nodejs libs on our program  
 9) data = new Buffer(data, 'base64').toString('ascii') : to convert base64 to ascii in nodejs  
-10) 
-
-20) Commands  
+10) Commands  
 npm init - downloads the package.json
 npm install express --save - downloads and installs express
 node app.js - to run node on terminal    
@@ -150,9 +148,46 @@ node app.js - to run node on terminal
 2) web server gives the response back to the one who makes request  
 3) to render templates we write res.render() not res.send()  
 4) if we modify a req in a particular middleware then in the next middleware also the req will get updated  
-5) frontend files can be in public or in views but views generally contains templates .. in public folder we keep static files and in views folder we generally keep templates files whose data can be changed based on the requirement through server  
-6) 
+5) frontend files can be in public or in views but views generally contains templates .. in public folder we keep static files and in views folder we generally keep templates files whose data can be changed based on the requirement through server   
+6) you can either load a whole public folder and send ajax calls from js files to the server (js is enabled on frontend)
+(frontend+backend) - the source code will not have the list items as the list items are added through jquery 
+https://github.com/coding-blocks-archives/WebNodeLive2017Winter/tree/master/Webinar12/express_sample
+OR
+(pure backend) - the source code will have the list items as we send a html page as a response
+do the manipulations in the server and send the reponse in the hbs templates (works even when js is not enabled on frontend)  
+https://github.com/coding-blocks-archives/WebNodeLive2017Winter/tree/master/Webinar12/express_server_rendering
+7) you can use routes to simplify the app.js file  
+https://github.com/coding-blocks-archives/WebNodeLive2017Winter/blob/master/Webinar12/express_server_rendering/server.js
+https://github.com/coding-blocks-archives/WebNodeLive2017Winter/blob/master/Webinar12/express_server_rendering/routes/todos.js
+8) ajax post & get request : 
+$.post('/todos/',{task: newTodo},function (data) {
+                todoList.empty();
+                for (todo of data) {
+                    todoList.append("<li>" + todo.task + "</li>")
+                }
+            }
+$.get("https://newsapi.org/v2/everything?q=tesla&from=2021-12-29&sortBy=publishedAt&apiKey=09aa6966a0724e0697d17efa3ddb62a9", 
+        (data) => {
+            console.log(data);
+            data.articles.forEach(function(i){
+                $('#list1').append($('<li>').text(i.title));
+            });
+        })
+9) Commands  
+app.use(express.json()); // to parse json
+app.use(express.urlencoded({ extended : true})); // to parse stuff inside req.body
+app.set('view engine', 'hbs'); // setting view engine as hbs
+app.set('views',__dirname + '/views'); // setting the views directory
+app.use("/xyz", express.static(__dirname + "/public")); // setting the public folder
+app.use("/todo", todoRoute); // for routing purpose
 
+
+<br><br>
+
+## Database
+
+## SQL
+1) 
 
 <br><br>
 

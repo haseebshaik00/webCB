@@ -1,12 +1,12 @@
 const express = require('express'),
       app = express();
 
-app.use(express.json());
-app.use(express.urlencoded({ extended : true}));
-app.set('view engine', 'hbs');
-app.set('views',__dirname + '/views');
-app.use("/xyz", express.static(__dirname + "/public"));
-
+app.use(express.json()); // to parse json
+app.use(express.urlencoded({ extended : true})); // to parse stuff inside req.body
+app.set('view engine', 'hbs'); // setting view engine as hbs
+app.set('views',__dirname + '/views'); // setting the views directory
+app.use("/xyz", express.static(__dirname + "/public")); // setting the public folder
+app.use("/todo", todoRoute); // for routing purpose
 
 let taskList = ['inbuilt task'];
 
