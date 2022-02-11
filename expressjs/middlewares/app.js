@@ -45,6 +45,3 @@ app.get('/hello', m1, m2, m3, (req, res) => {
 app.listen(4444, (req, res) => {    
     console.log("server started");
 });
-
-// query, params : read about this - are they object or array
-// base64 encoding

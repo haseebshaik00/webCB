@@ -125,8 +125,6 @@ l) more array functions: length, forof loop, indexin loop, slice, splice, concat
 m) closures- parent scopes are accessible inside but not the parent's arguments variable, this, string literal, equality, inheritance, prototypes, details in functions and classes, js callstack, setTimeout and setInterval  
 o) Unlike what common belief suggests, the delete operator has nothing to do with directly freeing memory […] delete is only effective on an object’s properties. It has no effect on variable or function names.  
 
-**6) JS OOPS**  
-<br><br>
 
 ## Backend  
   
@@ -139,7 +137,8 @@ o) Unlike what common belief suggests, the delete operator has nothing to do wit
 6) chrome js engine (V8 engine) + file system + network + http = nodejs  
 7) node is internally written using c++ and the node environment is a WORA/WORE write once run anywhere/everywhere environment   
 8) npm - node package manager ; use to install nodejs libs on our program  
-9) 
+9) data = new Buffer(data, 'base64').toString('ascii') : to convert base64 to ascii in nodejs  
+10) 
 
 20) Commands  
 npm init - downloads the package.json
@@ -150,10 +149,13 @@ node app.js - to run node on terminal
 1) express - web framework for node ; web framework are use to make web servers  
 2) web server gives the response back to the one who makes request  
 3) to render templates we write res.render() not res.send()  
-4) 
+4) if we modify a req in a particular middleware then in the next middleware also the req will get updated  
+5) frontend files can be in public or in views but views generally contains templates .. in public folder we keep static files and in views folder we generally keep templates files whose data can be changed based on the requirement through server  
+6) 
 
 
 <br><br>
+
 ## Notes  
 1) provide same name for a particular section of radio buttons to select only one radio button  
 2) to select a checkbox just by clicking the text you can use target the label "for" attribute with input's id  
@@ -203,10 +205,23 @@ firefox - gecko, edge - trident
 39) the browser has a layout engine and a js engine/interpreter in this js engine has a console, DOM : document object model - (object-document) helps to manipulate html and css of the website and BOM : browser object model (object - window) all of our code runs inside the BOM  
 40) asynchronous functions have callback and this functions cannot be assigned to a variable  
 41) port for http request : 80  
-42) 
+42) base64 encoding : It's basically a way of encoding arbitrary binary data in ASCII text. It takes 4 characters per 3 bytes of data, plus potentially a bit of padding at the end.Essentially each 6 bits of the input is encoded in a 64-character alphabet. The "standard" alphabet uses A-Z, a-z, 0-9 and + and /, with = as a padding character. There are URL-safe variants. Suppose we want to send some text, we want to send this text through the url and while we are sending this text it depricates the url, so it 
+wont be possible to understand the data what has been sent hence at that time we can use base64 encoding  
+43) three ways to define a func
+let a = function(){
+}
 
+function a(){
+}
+
+let a = () => {
+  console.log("A");
+}  
+44)   
+45) 
   
 <br><br>
+
 ## Writing README files on github
 1) https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax  
 2) https://levelup.gitconnected.com/github-readme-cheatsheet-617dff61fa23

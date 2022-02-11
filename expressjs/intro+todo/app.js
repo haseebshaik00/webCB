@@ -4,7 +4,7 @@ let app = express();
 
 // body parser - parse body of a req
 app.use(express.urlencoded({extended: true}));
-// tells express which templating lang have been used can be hbs, ejs ... 
+// tells express wchich templating lang have been used can be hbs, ejs ... 
 app.set('view engine', 'hbs');
 
 // this sort of function (req,res) is a called a middleware

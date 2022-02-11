@@ -4,7 +4,6 @@ $(() => {
     let outEncryptCode = $("#outEncryptCode");
     let encoBtn = $("#encoBtn");
     let encrBtn = $("#encrBtn"); 
-    let decBtn = $("#decBtn");
 
     encoBtn.click(() => {
         let data = inpCode.val();
