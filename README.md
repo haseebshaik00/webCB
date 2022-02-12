@@ -187,7 +187,13 @@ app.use("/todo", todoRoute); // for routing purpose
 ## Database
 
 ## SQL
-1) 
+1) Database, dbms, 3-level architecture, data independence, relation/table; key- primary, candidate, alternate, foreign; normalization; relation algebra- selection, projection and cartesian products; union, set difference and intersection    
+2) SQL - DQL and DML; SQL queries- create table; table cosntraints - column and table constraints; constraints: unique, null/not null, primary key, default, check -in, between, like, not like; multiple keywords using or/and; SQL queries- insert into table  
+3) SQL queries- select query; keywords- all, distinct, where, between, in, like, not like, escape  
+4) aggregate functions- min(), max(), avg(), sum(), count(), count(*), std.dev(), variance(); clause- order by - asc/desc, group by (used with) HAVING; SQL queries- UPDATE, DELETE, drop table, alter table- add & modify, subtable; inserting text in query; subqueries- expression subquery, inline view/dynamic table concept and quadratic subquery https://www.youtube.com/watch?v=2gMwtwLtWSY  
+5) sequence: select->from->where->group by->having->order by  
+6) 
+
 
 <br><br>
 
