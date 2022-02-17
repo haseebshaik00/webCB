@@ -1,20 +1,20 @@
 $(() => {
     let id = $('#id');
     let name = $('#name');
-    let butSubmit = $('#btnSubmit');
-    let persons = $('#persons');
+    let btnSubmit = $('#btnSubmit');
+    let personsList = $('#persons');
 
 
     function refreshPersonTable (persons) {
-        persons.empty()
-        persons.append(
+        personsList.empty()
+        personsList.append(
             `<tr>
             <th>ID</th>
             <th>Name</th>
             </tr>`
         )
         for (person of persons) {
-            persons.append(
+            personsList.append(
                 `<tr>
                     <td>${person.id}</td>
                     <td>${person.name}</td>
@@ -27,7 +27,17 @@ $(() => {
         refreshPersonTable(data)
     })
 
-    butSubmit.click(() => {
-        
+    btnSubmit.click(() => {
+        console.log("clicked");
+        $.post('/api/persons', 
+        {
+            id:   id.val(),
+            name: name.val()
+        },
+        function (data) {
+            id.val('');
+            name.val(''),
+            refreshPersonTable(data)
+        })
     });
 })

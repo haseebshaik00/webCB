@@ -1,26 +1,23 @@
-const route = require('express').Router();
+const route = require('express').Router(),
+        db  = require('../db');
 
-route.get("/", (req, res) =>  {
+route.get("/persons", (req, res) =>  {
     db.getAllPersons()
          .then((persons) => {
-              res.render('persons', {persons})
+              res.send(persons)
          })
          .catch((err) => {
-              res.render(err);
+              res.send({error: err});
          });
 });
 
-route.get("/add", (req, res) => {
-    res.render("persons_add");
-});
-
-route.post("/add", (req,res) => {
+route.post("/persons", (req,res) => {
     db.addPerson(req.body.id, req.body.name)
     .then(() => {
-         res.redirect("/pages");
+         res.redirect("/api/persons");
     })
-    .catch(() => {
-         res.render(err);
+    .catch((err) => {
+        res.send({error: err});
     });
 });
 
