@@ -7,23 +7,21 @@
     <title>Persons</title>
 </head>
 <body>
-    <form action="/add" method="POST">
-        <input type="number" name="id" id="id" placeholder="ID">
-        <input type="text" name="name" id="name" placeholder="Name">
-        <input type="submit" name="SUBMIT">
-    </form>
+    <input type="number" name="id" id="id" placeholder="ID">
+    <input type="text" name="name" id="name" placeholder="Name">
+    <input type="submit" id="btnSubmit" name="SUBMIT">
+
     <br><br>
-    <table border="2" cellspacing="10" cellpadding="10">
+
+    <table border="2" cellspacing="10" cellpadding="10" id="persons">
         <tr>
             <th>ID</th>
             <th>Name</th>
         </tr>
-        {{#each persons as |person|}}
             <tr>
-                <td>{{person.id}}</td>
-                <td>{{person.name}}</td>
+                <td>Test ID</td>
+                <td>Test Name</td>
             </tr>
-        {{/each}}
     </table>
 </body>
 </html>
