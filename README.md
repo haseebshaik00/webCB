@@ -124,6 +124,21 @@ k) strings- declaration types, backtick strings, functions: length, indexOf, las
 l) more array functions: length, forof loop, indexin loop, slice, splice, concat  
 m) closures- parent scopes are accessible inside but not the parent's arguments variable, this, string literal, equality, inheritance, prototypes, details in functions and classes, js callstack, setTimeout and setInterval  
 o) Unlike what common belief suggests, the delete operator has nothing to do with directly freeing memory […] delete is only effective on an object’s properties. It has no effect on variable or function names.  
+p) 
+--> without jquery function declaration
+    window.onload = function ()
+    {
+        i1.innerHTML = "a";
+        i1.onclick = function(){
+            i1.innerHTML = "b";
+        }
+    }
+
+---> jquery function declaration
+    $('#append').click(() => {
+      let text1 = $('#item').val();
+      $('#list').append($('<li>').text(text1));
+    });
 
 
 ## Backend  
@@ -149,7 +164,7 @@ node app.js - to run node on terminal
 3) to render templates we write res.render() not res.send()  
 4) if we modify a req in a particular middleware then in the next middleware also the req will get updated  
 5) frontend files can be in public or in views but views generally contains templates .. in public folder we keep static files and in views folder we generally keep templates files whose data can be changed based on the requirement through server   
-6) you can either load a whole public folder and send ajax calls from js files to the server (js is enabled on frontend)
+6) you can either load a whole public folder and send ajax calls (here ajax calls works directly without loading the page) from js files to the server (js is enabled on frontend)
 (frontend+backend) - the source code will not have the list items as the list items are added through jquery 
 https://github.com/coding-blocks-archives/WebNodeLive2017Winter/tree/master/Webinar12/express_sample
 OR
@@ -192,7 +207,9 @@ app.use("/todo", todoRoute); // for routing purpose
 3) SQL queries- select query; keywords- all, distinct, where, between, in, like, not like, escape  
 4) aggregate functions- min(), max(), avg(), sum(), count(), count(*), std.dev(), variance(); clause- order by - asc/desc, group by (used with) HAVING; SQL queries- UPDATE, DELETE, drop table, alter table- add & modify, subtable; inserting text in query; subqueries- expression subquery, inline view/dynamic table concept and quadratic subquery https://www.youtube.com/watch?v=2gMwtwLtWSY  
 5) sequence: select->from->where->group by->having->order by  
-6) 
+6) sql+express : https://github.com/coding-blocks-archives/WebNodeLive2017Winter/tree/master/Webinar13
+as a backend functioning website and also as an API  
+7) 
 
 
 <br><br>
