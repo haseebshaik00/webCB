@@ -1,7 +1,6 @@
 const route = require('express').Router(),
         db  = require('../db');
 
-
 route.get("/", (req, res) =>  {
      db.getAllPersons()
           .then((persons) => {
@@ -19,7 +18,7 @@ route.get("/add", (req, res) => {
 route.post("/add", (req,res) => {
      db.addPerson(req.body.id, req.body.name)
      .then(() => {
-          res.redirect("/pages/");
+          res.redirect("/pages");
      })
      .catch(() => {
           res.render(err);
