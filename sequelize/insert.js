@@ -3,18 +3,26 @@ const {db, Student} = require('./model');
 async function task(){
     try{
 
-        await db.sync({alter: true})
-        .then(() => console.log("Database Synchronized"))
-        .catch((err) => console.log(err));
+        await db.sync();
     
-        // Insert a Student
-        await Student.create({
-            name: "Tom Hardy",
-            age: 40
-        })
+        // you can provide clauses here .. see the docs for more explaination
+        const students = await Student.findAll({
+            where: {
+                age: {
+                    $gt: 10
+                }
+            },
+            order: [
+                ['name', 'ASC']
+            ]
+        });
+        students.forEach(s => {
+            console.log(`name: ${s.dataValues.name} \t\t age: ${s.dataValues.age}`);
+        });
+
     }
     catch(e){
-
+        console.error(e);
     }
 }
 

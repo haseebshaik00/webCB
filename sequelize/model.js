@@ -19,6 +19,10 @@ const Student = db.define('student', {
     }
 }); 
 
+db.sync({alter: true})
+        .then(() => console.log("Database Synchronized"))
+        .catch((err) => console.log(err));
+
 module.exports = {
     db, Student
 }
