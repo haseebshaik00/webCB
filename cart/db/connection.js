@@ -5,11 +5,10 @@ const db = new Sequelize('cartDB', 'cartuser', 'cartuser123', {
     dialect: 'mysql'
   });
 
-
 db.authenticate()
   .then(() => console.log("Database Connected!"))
   .catch((err) => console.log(err));
 
 module.exports = {
-  db
+  db, Sequelize
 }
