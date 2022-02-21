@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch Code Gen</title>
+</head>
+<body>
+    <h1>Batch Code Generation</h1>
+    <br><br>
+    
+    <form action="/batchcode" method="post">
+        <b>Course</b>
+        <select name="course" id="">
+            {{#each courses as |c|}}
+                <option value="{{c.id}}">{{c.name}}</option>
+            {{/each}}
+        </select>
+        
+        <br><br>
+
+        <b>Season</b>
+        <select name="season" id="">
+            {{#each seasons as |s|}}
+                <option value="{{s.id}}">{{s.name}}</option>
+            {{/each}}
+        </select>    
+
+        <br><br>
+
+        <b>Center</b>
+        <select name="center" id="">
+            {{#each centers as |ce|}}
+                <option value="{{ce.id}}">{{ce.name}}</option>
+            {{/each}}
+        </select>    
+
+        <br><br>
+
+        <b>Year</b>
+        <select name="year" id="">
+            {{#each years as |y|}}
+                <option value="{{y}}">{{y}}</option>
+            {{/each}}
+        </select>    
+
+        <br><br>
+
+        <b>Batch Number</b>
+        <input type="number" name="bno">
+        
+        <br><br>
+
+        <input type="date" name="start">
+        <input type="date" name="end">
+
+        <input type="submit" name="SUBMIT" id="">
+        <input type="reset" name="RESET">
+    </form>
+</body>
+</html>
