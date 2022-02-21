@@ -1,8 +1,15 @@
-const mysql = require('mysql2');
+const Sequelize = require('sequelize');
 
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'person123',
-  password: 'person123',
-  database: 'persondb'
-});
+const db = new Sequelize('cartDB', 'cartuser', 'cartuser123', {
+    host: 'localhost',
+    dialect: 'mysql'
+  });
+
+
+db.authenticate()
+  .then(() => console.log("Database Connected!"))
+  .catch((err) => console.log(err));
+
+module.exports = {
+  db
+}
