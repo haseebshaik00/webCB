@@ -212,6 +212,13 @@ as a backend functioning website and also as an API
 7) 
 
 
+## Sequelize Library
+1) object relation mapper, connect with various type of sql dbs, save data in form of js objects, automatically creates sql queries which automatically save data into databases, tables ~ definition/schema , object here is a row  
+2) sequelize functions are based on promises  
+3) use associations to connect tables  
+4) 
+
+
 <br><br>
 
 ## Notes  
@@ -275,7 +282,7 @@ function a(){
 let a = () => {
   console.log("A");
 }  
-44)   
+44) await code is always in a try catch block  
 45) 
   
 <br><br>
