@@ -30,6 +30,10 @@ const Product = db.define('products', {
     }
 });
 
+db.sync()
+    .then(() => console.log("Database Created!"))
+    .catch((e) => console.error(e));
+
 module.exports = {
     User, Product
 }
