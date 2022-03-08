@@ -1,10 +1,10 @@
 let fetchProducts = (done) => {
-    $.get('/api/products', funtion(data){
+    $.get('/api/products', (data) => {
         done(data);
     });
 }
 
-let createProducts = () => {
+let createProducts = (product) => {
     return $(`
     <div class="card m-3" style="width: 18rem;">
         <div class="card-body">
@@ -21,9 +21,17 @@ let createProducts = () => {
     `);
 };
 
-
 $(() => {
-
+    
     let productList = $('#product-list'); 
+    let addProductBtn = $('#addProductBtn');
+    
+    fetchProducts(function(products){
+        productList.empty();
+        for(product of products){
+            productList.append(createProducts(product));
+        }
+    });
 
+    
 });
