@@ -21,6 +21,16 @@ let createProducts = (product) => {
     `);
 };
 
+let addProduct = (name, manuafacturer, price, done) => {
+    $.post('/api/products', {
+        name: name,
+        price: price,
+        manuafacturer: manuafacturer
+    }, (data) => {
+        done(data);
+    });
+};
+
 $(() => {
     
     let productList = $('#product-list'); 
@@ -33,5 +43,14 @@ $(() => {
         }
     });
 
-    
+    let product_name = $('#product_name');
+    let product_manuafacturer = $('#product_manuafacturer');
+    let product_price = $('#product_price');
+
+    addProductBtn.click(function(){
+        addProduct(product_name.val(), product_manuafacturer.val(), product_price.val(), function(added){
+            window.alert("Added " + added.name + " Successfully!");
+            console.log("added");
+        });
+    });
 });
