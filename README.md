@@ -216,7 +216,9 @@ as a backend functioning website and also as an API
 1) object relation mapper, connect with various type of sql dbs, save data in form of js objects, automatically creates sql queries which automatically save data into databases, tables ~ definition/schema , object here is a row  
 2) sequelize functions are based on promises  
 3) use associations to connect tables  
-4) 
+4) findAll() works using promise API  
+5) put db.sync in the end usually but in await func put it at first  
+6) 
 
 
 <br><br>
@@ -283,7 +285,12 @@ let a = () => {
   console.log("A");
 }  
 44) await code is always in a try catch block  
-45) 
+45) In nodejs, if we write- require('x') , then it first searches for x.js then it searches for x.json and then at last x/index.js  
+46) user mode - 3 things are required - identification, authentication & authorization  
+47) In a project, maitain routes, controllers, databases and structure them accordingly  
+48) we can make proj using 2 approaches, top down(api to db layer) & another bottom up(db layer to api), on industry level 
+top down approach is followed and you can use use bottom up approach while making small POCs  
+49) 
   
 <br><br>
 
