@@ -1,10 +1,22 @@
 // JS Multitasking
-/* Concurrency - concurrency is js is done through time slicing, this happens by dividing time and so fast it looks like they are happening 
-parallely. 
+/* Concurrency - concurrency in js is done through time slicing, this happens by dividing time and so fast it looks like they 
+are happening parallely. 
 
-Callback - A callback is a function passed as an argument to another function
+// Callback - A callback is a function passed as an argument to another function
 This technique allows a function to call another function
 A callback function can run after older function has finished
+callback can only be used in async funcs
+
+// A promise is used to handle the asynchronous result of an operation. JavaScript is designed to not wait for an 
+asynchronous block of code to completely execute before other synchronous parts of the code can run. With Promises, 
+we can defer the execution of a code block until an async request is completed.
+
+// normally in js the fucntions runs in sequential order but if there are asynchronous functions it's not necessary that 
+// .. they run in a seq order hence to make them in seq order we use promises and we can also use async await with promises
+
+// They keyword async is used to make a function asynchronous. The await keyword will ask the execution to wait until 
+the defined task gets executed. It allows the use of await Keyword inside the functions with async keyword. 
+Using await in any other way will cause a syntax error.
 */
 
 // Concurrency on single thread
@@ -18,11 +30,11 @@ function sayHello(times, name){
     }, 100);
 }
 
-sayHello(3, "haseeb");
-sayHello(2, "kunal");
+sayHello(3, "haseeb1");
+sayHello(2, "kunal1");
 
 // both haseeb and kunal execute parallely; to rectify the above error we can use asynchronous callback functions
-// async function
+//  ****************** Async Function ******************
 function sayHello1(times, name, doneSaying){
     let c=0;
     let loopId = setInterval(() => {
@@ -37,9 +49,9 @@ function sayHello1(times, name, doneSaying){
 }
 
 
-sayHello1(3, "haseeb", () => {
-    sayHello1(2, "kunal", () => {
-        sayHello1(2, "lakshit", () => {
+sayHello1(3, "haseeb2", () => {
+    sayHello1(2, "kunal2", () => {
+        sayHello1(10, "lakshit2", () => {
 
         })
     })
@@ -49,7 +61,7 @@ sayHello1(3, "haseeb", () => {
 
 
 // instead of this we can also use promises introduced in es6
-// promise
+//  ****************** Promises ******************
 function sayHello2(times, name){
     return new Promise((resolve, reject) => {
         let c=0;
@@ -68,20 +80,21 @@ function sayHello2(times, name){
 
 //concurrent
 console.log("\n promises \n")
-sayHello2(3, "haseeb")
-    .then(sayHello2(2,"KUNAL"))
-    .then(sayHello2(3,"lakshit"));
+sayHello2(3, "haseeb3")
+    .then(sayHello2(2,"KUNAL3"))
+    .then(sayHello2(3,"lakshit3"));
 
-sayHello2(3, "haseeb")
-    .then(sayHello2(2,"KUNAL").then(sayHello2(3,"lakshit")));
+sayHello2(3, "haseeb4")
+    .then(sayHello2(2,"KUNAL4").then(sayHello2(3,"lakshit4")));
 
 
 //sequential
-sayHello2(3, "haseeb")
-    .then(() => sayHello2(2, "kunal"))
-    .then(() => sayHello2(3, "lakshit"));
+sayHello2(3, "haseeb5")
+    .then(() => sayHello2(2, "kunal5"))
+    .then(() => sayHello2(3, "lakshit5"));
 
-// async-await - accepts promises resove func
+
+// async-await - accepts promises resove func - makes easier to write promises
 async function task(){
     await sayHello2(3, "haseeb");
     await sayHello2(2, "kunal");
@@ -94,20 +107,24 @@ task();
 // .. if a normal sayHello is written is written with task(); the sayHello runs parallely with the async func 
 // here the function with no await will run parallely
 
+
+// Promise.all is used wheh we want some functions to run in batch, here haseeb and kunal will complete their process and then 
+// ... only spike and lakshit will start executing
 async function task1(){
     await Promise.all([ 
         sayHello2(3, "haseeb"),
         sayHello2(2, "kunal")
     ]);
-    console.log("--- first batch over ---")
+    console.log("--- first batch over ---");
+    console.log("--- second batch starting ---");
     await Promise.all([ 
         sayHello2(1, "spike"),
         sayHello2(2, "lakshit")
     ]);
+    console.log("--- second batch over ---");
 }
 
-// Promise.all is used wheh we want some functions to run in batch, here haseeb and kunal will complete their process and then 
-// ... only spike and lakshit will start executing
+
 
 
 // networks, protocols and hardware
