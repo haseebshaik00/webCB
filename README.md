@@ -290,7 +290,10 @@ let a = () => {
 47) In a project, maitain routes, controllers, databases and structure them accordingly  
 48) we can make proj using 2 approaches, top down(api to db layer) & another bottom up(db layer to api), on industry level 
 top down approach is followed and you can use use bottom up approach while making small POCs  
-49) 
+49) callbacks + promises + async/await : 
+https://www.w3schools.com/js/js_callback.asp#:~:text=A%20callback%20is%20a%20function,after%20another%20function%20has%20finished
+https://www.youtube.com/watch?v=PoRJizFvM7s
+50) 
   
 <br><br>
 
