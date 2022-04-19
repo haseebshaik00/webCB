@@ -293,7 +293,8 @@ top down approach is followed and you can use use bottom up approach while makin
 49) callbacks + promises + async/await : 
 https://www.w3schools.com/js/js_callback.asp#:~:text=A%20callback%20is%20a%20function,after%20another%20function%20has%20finished
 https://www.youtube.com/watch?v=PoRJizFvM7s
-50) 
+50) on industry level, people create backend as an api and frontend seperately also they follow a top down approach api->db layer. 
+51) 
   
 <br><br>
 

@@ -17,7 +17,7 @@ createPost = (post) => {
         setTimeout( ()=> {
             posts.push(post);
             const error = false;
-            if(error) {
+            if(!error) {
                 resolve();
             }
             else {
