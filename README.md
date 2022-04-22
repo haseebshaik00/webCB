@@ -164,8 +164,8 @@ node app.js - to run node on terminal
 3) to render templates we write res.render() not res.send()  
 4) if we modify a req in a particular middleware then in the next middleware also the req will get updated  
 5) frontend files can be in public or in views but views generally contains templates .. in public folder we keep static files and in views folder we generally keep templates files whose data can be changed based on the requirement through server   
-6) you can either load a whole public folder and send ajax calls (here ajax calls works directly without loading the page) from js files to the server (js is enabled on frontend)
-(frontend+backend) - the source code will not have the list items as the list items are added through jquery 
+6) (frontend+backend) - industry level -  you can either load a whole public folder and send ajax calls (here ajax calls works directly without loading the page) from js files to the server (js is enabled on frontend)
+.. the source code will not have the list items as the list items are added through jquery 
 https://github.com/coding-blocks-archives/WebNodeLive2017Winter/tree/master/Webinar12/express_sample
 OR
 (pure backend) - the source code will have the list items as we send a html page as a response
@@ -294,7 +294,7 @@ top down approach is followed and you can use use bottom up approach while makin
 https://www.w3schools.com/js/js_callback.asp#:~:text=A%20callback%20is%20a%20function,after%20another%20function%20has%20finished
 https://www.youtube.com/watch?v=PoRJizFvM7s
 50) on industry level, people create backend as an api and frontend seperately also they follow a top down approach api->db layer. 
-51) 
+51) to display photos on your site, host on imgur and use node imgur dependency on your app 
   
 <br><br>
 
