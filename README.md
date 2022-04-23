@@ -295,6 +295,11 @@ https://www.w3schools.com/js/js_callback.asp#:~:text=A%20callback%20is%20a%20fun
 https://www.youtube.com/watch?v=PoRJizFvM7s
 50) on industry level, people create backend as an api and frontend seperately also they follow a top down approach api->db layer. 
 51) to display photos on your site, host on imgur and use node imgur dependency on your app 
+54) When should I use JSON Stringify?
+When data is sent to a server it must be sent as a string. JSON.stringify() method converts JavaScript data to a JSON-formatted string. It is usually applied to JS objects to produce a ready-made JSON string to be sent to the server. 
+55) Does MongoDB use BSON, or JSON? MongoDB stores data in BSON format both internally, and over the network, but that doesn't mean you can't think of MongoDB as a JSON database. Anything you can represent in JSON can be natively stored in MongoDB, and retrieved just as easily in JSON. 
+What is BSON used for?
+BSON is the binary encoding of JSON-like documents that MongoDB uses when storing documents in collections. It adds support for data types like Date and binary that aren't supported in JSON.
   
 <br><br>
 
