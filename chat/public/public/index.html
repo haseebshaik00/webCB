@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Socket IO</title>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script defer src="/script.js"></script>
+</head>
+<body>
+    <h1>Socket IO Char App</h1>
+
+    <div id="loginBox">
+        <input type="text" id="inpUsername">
+        <button id="btnStart">START</button>
+    </div>
+
+    <div id="chatBox">
+        <input type="text" id="inpMsg">
+        <button id="btnSend">Send Message!</button>
+        <ul id="ulMsgList"></ul>
+    </div>
+</body>
+</html>
