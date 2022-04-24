@@ -10,15 +10,19 @@
     <script defer src="/script.js"></script>
 </head>
 <body>
-    <h1>Socket IO Char App</h1>
+    <h1>Socket IO Chat App</h1>
+
+    <h3 id="user"></h3>
 
     <div id="loginBox">
-        <input type="text" id="inpUsername">
+        <input type="text" id="inpUsername" placeholder="username">
+        <input type="password" id="inpPassword" placeholder="password">
         <button id="btnStart">START</button>
     </div>
 
     <div id="chatBox">
-        <input type="text" id="inpMsg">
+        <input type="text" id="inpToUser" placeholder="sent to?">
+        <input type="text" id="inpMsg" placeholder="msg">
         <button id="btnSend">Send Message!</button>
         <ul id="ulMsgList"></ul>
     </div>
