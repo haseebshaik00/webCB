@@ -5,6 +5,7 @@ let btn = document.getElementById("btn");
 
 btn.onclick = () => {
     // button clicked from client - req sent to server
+    // this is called an event
     socket.emit('boom');
 }
 

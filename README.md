@@ -299,7 +299,10 @@ https://www.youtube.com/watch?v=PoRJizFvM7s
 When data is sent to a server it must be sent as a string. JSON.stringify() method converts JavaScript data to a JSON-formatted string. It is usually applied to JS objects to produce a ready-made JSON string to be sent to the server. 
 55) Does MongoDB use BSON, or JSON? MongoDB stores data in BSON format both internally, and over the network, but that doesn't mean you can't think of MongoDB as a JSON database. Anything you can represent in JSON can be natively stored in MongoDB, and retrieved just as easily in JSON. 
 What is BSON used for?
-BSON is the binary encoding of JSON-like documents that MongoDB uses when storing documents in collections. It adds support for data types like Date and binary that aren't supported in JSON.
+BSON is the binary encoding of JSON-like documents that MongoDB uses when storing documents in collections. It adds support for data types like Date and binary that aren't supported in JSON. 
+56) sockets are used in stuff like chatting, google docs, live collab paint, live share ide 
+57)  defer : waits till the dom in the page gets loaded 
+58) 
   
 <br><br>
 

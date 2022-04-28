@@ -19,17 +19,13 @@ io.on('connection', (socket) => {
     
     socket.on('logging_in', (data) => {
 
-        function login(s, data){
-            s.join(data.username);
-            s.emit('logged_in', data);
-            console.log("logged in ", data.username);
-            socketMap[s.id] = data.username;
-            console.log(socketMap);
-        }
-
         if(users[data.username]){
             if(users[data.username] == data.password){
-                login(socket, data);
+                socket.join(data.username);
+                socket.emit('logged_in', data);
+                console.log("logged in ", data.username);
+                socketMap[socket.id] = data.username;
+                console.log(socketMap);
             }
             else{
                 socket.emit('logged_fail', data);
@@ -38,7 +34,11 @@ io.on('connection', (socket) => {
         else{
             users[data.username] = data.password;   
             // joins the room
-            login(socket, data.username);
+            socket.join(data.username);
+            socket.emit('logged_in', data);
+            console.log("logged in ", data.username);
+            socketMap[socket.id] = data.username;
+            console.log(socketMap);
         }
         console.log(users);
     });
