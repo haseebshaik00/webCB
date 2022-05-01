@@ -1,4 +1,4 @@
-**1) Introduction**  
+# Introduction  
 https://github.com/haseebshaik00/FullStack_NodeJS_Live_March2020/blob/master/Lecture01/Intro_to_WebDev.pptx  
 a) how the web works: servers, clients, ISPs, DNS, Datacenters  
 b) web terminologies: protocols; addresses-ip,domain,mac; packets  
@@ -22,9 +22,9 @@ f) latest developments - VirtualDOM, ShadowDOM, Sockets, Pub/Sub, Push Notificat
   
 <br><br>
 
-## FrontEnd    
+# FrontEnd    
 
-**2) HTML**  
+**1) HTML**  
 a) html5 boilerplate and description of each element and attribute in it  
 https://github.com/haseebshaik00/FullStack_NodeJS_Live_March2020/blob/master/Lecture01/html-basics/index.html  
 b) normal text, tags - para"p-/p", break"br", italic "i-/i" or "em-/em", bold "b-/b" or "strong-/strong", underline"u-/u",
@@ -38,7 +38,7 @@ g) form action="" The HTML form action attribute defines where to send the form 
 h) The method attribute specifies how to send form-data (the form-data is sent to the page specified in the action attribute). The form-data can be sent as URL variables (with method="get" ) or as HTTP post transaction (with method="post").  
 
 
-**3) CSS**  
+**2) CSS**  
 a) referred in the head tag using - <link rel="stylesheet" href="./style.css">    
 b) used for styling texts, styling boxes and css layout  
 c) selectors - type, class(.), id(#), universal(*), attribute exampls- input[disabled] or input[type=text]    
@@ -63,7 +63,7 @@ p) keyframes and animations : "animation: name duration timing-function delay it
 q) use text-align:center; to align text in the center of div  
 
 
-**4) CSS Flexbox**  
+**3) CSS Flexbox**  
 a) https://css-tricks.com/snippets/css/a-guide-to-flexbox/ 
 b) display: flex;
 c) flex-wrap: wrap;
@@ -75,7 +75,7 @@ h) gap: 20px 30px;
 i) text-align: center;
 
 
-**5) Media Queries**
+**4) Media Queries**
 a) All possible queries  
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -108,7 +108,7 @@ a) All possible queries
 }
 
   
-**6) JS**  
+**5) JS**  
 a) <script async defer type="text/javascript" src="script.js"></script> : syntax for js file integration  
 https://www.w3schools.com/tags/att_script_async.asp  
 b) datatypes : (number,string,boolean,object,function,undefined)  
@@ -140,9 +140,10 @@ p)
       $('#list').append($('<li>').text(text1));
     });
 
+<br><br>
 
-## Backend  
-  
+# Backend  
+
 ## Nodejs
 1) js interpreter running in terminal  
 2) the outer most scope in browser is window and in node terminal it is global  
@@ -199,7 +200,7 @@ app.use("/todo", todoRoute); // for routing purpose
 
 <br><br>
 
-## Database
+# Database
 
 ## SQL
 1) Database, dbms, 3-level architecture, data independence, relation/table; key- primary, candidate, alternate, foreign; normalization; relation algebra- selection, projection and cartesian products; union, set difference and intersection    
@@ -209,7 +210,6 @@ app.use("/todo", todoRoute); // for routing purpose
 5) sequence: select->from->where->group by->having->order by  
 6) sql+express : https://github.com/coding-blocks-archives/WebNodeLive2017Winter/tree/master/Webinar13
 as a backend functioning website and also as an API  
-7) 
 
 
 ## Sequelize Library
@@ -218,12 +218,29 @@ as a backend functioning website and also as an API
 3) use associations to connect tables  
 4) findAll() works using promise API  
 5) put db.sync in the end usually but in await func put it at first  
-6) 
+
+## MongoDB
+1) Mongo + Node : https://www.w3schools.com/nodejs/nodejs_mongodb.asp  
 
 
 <br><br>
 
-## Notes  
+# Extras
+
+## Socket.io
+https://socket.io/
+
+## Testing and Coverage
+Mocha : https://mochajs.org/
+Chai : https://www.chaijs.com/
+Jest : https://jestjs.io/
+RTL : https://testing-library.com/docs/react-testing-library/intro/
+
+## Deploying & Git n Github
+
+<br><br>
+
+# Notes  
 1) provide same name for a particular section of radio buttons to select only one radio button  
 2) to select a checkbox just by clicking the text you can use target the label "for" attribute with input's id  
 3) giving height and width to inline elements is not possible so we make them inline-block  
@@ -306,6 +323,6 @@ BSON is the binary encoding of JSON-like documents that MongoDB uses when storin
   
 <br><br>
 
-## Writing README files on github
+# Writing README files on github
 1) https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax  
 2) https://levelup.gitconnected.com/github-readme-cheatsheet-617dff61fa23
